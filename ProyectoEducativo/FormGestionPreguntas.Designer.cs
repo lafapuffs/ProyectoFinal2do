@@ -19,6 +19,8 @@ namespace ProyectoEducativo
 		private System.Windows.Forms.Button btnEliminar;
 		private System.Windows.Forms.Button btnModificar;
 		private System.Windows.Forms.Button btnActualizar;
+		private System.Windows.Forms.ComboBox cmbModulos;
+		private System.Windows.Forms.Label lblEstado;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -46,15 +48,17 @@ namespace ProyectoEducativo
 			this.btnModificar = new System.Windows.Forms.Button();
 			this.btnAgregar = new System.Windows.Forms.Button();
 			this.btnActualizar = new System.Windows.Forms.Button();
+			this.cmbModulos = new System.Windows.Forms.ComboBox();
+			this.lblEstado = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPreguntas)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dgvPreguntas
 			// 
 			this.dgvPreguntas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvPreguntas.Location = new System.Drawing.Point(22, 29);
+			this.dgvPreguntas.Location = new System.Drawing.Point(12, 12);
 			this.dgvPreguntas.Name = "dgvPreguntas";
-			this.dgvPreguntas.Size = new System.Drawing.Size(701, 268);
+			this.dgvPreguntas.Size = new System.Drawing.Size(722, 268);
 			this.dgvPreguntas.TabIndex = 0;
 			// 
 			// btnEliminar
@@ -75,6 +79,7 @@ namespace ProyectoEducativo
 			this.btnModificar.TabIndex = 3;
 			this.btnModificar.Text = "Modificar";
 			this.btnModificar.UseVisualStyleBackColor = true;
+			this.btnModificar.Click += new System.EventHandler(this.BtnModificarClick);
 			// 
 			// btnAgregar
 			// 
@@ -96,11 +101,35 @@ namespace ProyectoEducativo
 			this.btnActualizar.UseVisualStyleBackColor = true;
 			this.btnActualizar.Click += new System.EventHandler(this.BtnActualizarClick);
 			// 
+			// cmbModulos
+			// 
+			this.cmbModulos.FormattingEnabled = true;
+			this.cmbModulos.Items.AddRange(new object[] {
+			"Antropologia",
+			"Arquitectura",
+			"Calculo",
+			"Deporte"});
+			this.cmbModulos.Location = new System.Drawing.Point(665, 288);
+			this.cmbModulos.Name = "cmbModulos";
+			this.cmbModulos.Size = new System.Drawing.Size(150, 21);
+			this.cmbModulos.TabIndex = 6;
+			this.cmbModulos.SelectedIndexChanged += new System.EventHandler(this.CmbModulosSelectedIndexChanged);
+			// 
+			// lblEstado
+			// 
+			this.lblEstado.Location = new System.Drawing.Point(12, 291);
+			this.lblEstado.Name = "lblEstado";
+			this.lblEstado.Size = new System.Drawing.Size(100, 23);
+			this.lblEstado.TabIndex = 7;
+			this.lblEstado.Text = "labelEstado";
+			// 
 			// FormGestionPreguntas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 321);
+			this.Controls.Add(this.lblEstado);
+			this.Controls.Add(this.cmbModulos);
 			this.Controls.Add(this.btnActualizar);
 			this.Controls.Add(this.btnAgregar);
 			this.Controls.Add(this.btnModificar);

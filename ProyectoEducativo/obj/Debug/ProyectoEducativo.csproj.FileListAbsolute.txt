@@ -23,3 +23,4 @@ C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\Proye
 C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormAgregarPregunta.resources
 C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionPreguntas.resources
 C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormModificarUsuario.resources
+C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormModificarPregunta.resources

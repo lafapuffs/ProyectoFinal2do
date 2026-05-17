@@ -43,7 +43,7 @@ namespace ProyectoEducativo
 
                 int resultado = Convert.ToInt32(cmd.ExecuteScalar());
 
-                // --- AQUÍ ESTABA EL ERROR: Faltaban las llaves del IF ---
+         
                 if (resultado > 0)
                 {
                     MessageBox.Show("¡Bienvenido " + user + "!");

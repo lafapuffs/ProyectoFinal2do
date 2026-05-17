@@ -78,6 +78,10 @@
     <Compile Include="FormJugador.Designer.cs">
       <DependentUpon>FormJugador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormModificarPregunta.cs" />
+    <Compile Include="FormModificarPregunta.Designer.cs">
+      <DependentUpon>FormModificarPregunta.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormModificarUsuario.cs" />
     <Compile Include="FormModificarUsuario.Designer.cs">
       <DependentUpon>FormModificarUsuario.cs</DependentUpon>
@@ -111,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormJugador.resx">
       <DependentUpon>FormJugador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModificarPregunta.resx">
+      <DependentUpon>FormModificarPregunta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormModificarUsuario.resx">
       <DependentUpon>FormModificarUsuario.cs</DependentUpon>
