@@ -50,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuracion.cs" />
     <Compile Include="FormAdministrador.cs" />
     <Compile Include="FormAdministrador.Designer.cs">
       <DependentUpon>FormAdministrador.cs</DependentUpon>
@@ -65,6 +66,14 @@
     <Compile Include="FormAntropologia.cs" />
     <Compile Include="FormAntropologia.Designer.cs">
       <DependentUpon>FormAntropologia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarModulo.cs" />
+    <Compile Include="FormEditarModulo.Designer.cs">
+      <DependentUpon>FormEditarModulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormGestionModulos.cs" />
+    <Compile Include="FormGestionModulos.Designer.cs">
+      <DependentUpon>FormGestionModulos.cs</DependentUpon>
     </Compile>
     <Compile Include="FormGestionPreguntas.cs" />
     <Compile Include="FormGestionPreguntas.Designer.cs">
@@ -106,6 +115,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAntropologia.resx">
       <DependentUpon>FormAntropologia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarModulo.resx">
+      <DependentUpon>FormEditarModulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGestionModulos.resx">
+      <DependentUpon>FormGestionModulos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGestionPreguntas.resx">
       <DependentUpon>FormGestionPreguntas.cs</DependentUpon>

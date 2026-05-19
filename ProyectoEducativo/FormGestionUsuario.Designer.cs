@@ -14,15 +14,17 @@ namespace ProyectoEducativo
 		/// Designer variable used to keep track of non-visual components.
 		/// </summary>
 		private System.ComponentModel.IContainer components = null;
-		private System.Windows.Forms.Button Agregar;
-		private System.Windows.Forms.Button Eliminar;
-		private System.Windows.Forms.Button Modificar;
-		private System.Windows.Forms.Button Consultar;
+		private System.Windows.Forms.Button btnAgregar;
+		private System.Windows.Forms.Button btnEliminar;
+		private System.Windows.Forms.Button btnModificar;
+		private System.Windows.Forms.Button btnConsultar;
 		private System.Windows.Forms.Button btnCerrarSesion;
 		private System.Windows.Forms.Button btnVolver;
 		private System.Windows.Forms.DataGridView dgvUsuario;
 		private System.Windows.Forms.Label lblEstado;
 		private System.Windows.Forms.TextBox txtConsultar;
+		private System.Windows.Forms.PictureBox picBanderaIngles;
+		private System.Windows.Forms.PictureBox picBanderaEspanol;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -45,67 +47,72 @@ namespace ProyectoEducativo
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.Agregar = new System.Windows.Forms.Button();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionUsuario));
+			this.btnAgregar = new System.Windows.Forms.Button();
 			this.dgvUsuario = new System.Windows.Forms.DataGridView();
-			this.Eliminar = new System.Windows.Forms.Button();
-			this.Modificar = new System.Windows.Forms.Button();
-			this.Consultar = new System.Windows.Forms.Button();
+			this.btnEliminar = new System.Windows.Forms.Button();
+			this.btnModificar = new System.Windows.Forms.Button();
+			this.btnConsultar = new System.Windows.Forms.Button();
 			this.btnCerrarSesion = new System.Windows.Forms.Button();
 			this.btnVolver = new System.Windows.Forms.Button();
 			this.lblEstado = new System.Windows.Forms.Label();
 			this.txtConsultar = new System.Windows.Forms.TextBox();
+			this.picBanderaIngles = new System.Windows.Forms.PictureBox();
+			this.picBanderaEspanol = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// Agregar
+			// btnAgregar
 			// 
-			this.Agregar.Location = new System.Drawing.Point(44, 264);
-			this.Agregar.Name = "Agregar";
-			this.Agregar.Size = new System.Drawing.Size(101, 49);
-			this.Agregar.TabIndex = 0;
-			this.Agregar.Text = "Agregar";
-			this.Agregar.UseVisualStyleBackColor = true;
-			this.Agregar.Click += new System.EventHandler(this.AgregarClick);
+			this.btnAgregar.Location = new System.Drawing.Point(44, 264);
+			this.btnAgregar.Name = "btnAgregar";
+			this.btnAgregar.Size = new System.Drawing.Size(101, 49);
+			this.btnAgregar.TabIndex = 0;
+			this.btnAgregar.Text = "Agregar";
+			this.btnAgregar.UseVisualStyleBackColor = true;
+			this.btnAgregar.Click += new System.EventHandler(this.AgregarClick);
 			// 
 			// dgvUsuario
 			// 
 			this.dgvUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvUsuario.Location = new System.Drawing.Point(44, 22);
+			this.dgvUsuario.Location = new System.Drawing.Point(44, 30);
 			this.dgvUsuario.Name = "dgvUsuario";
 			this.dgvUsuario.ReadOnly = true;
-			this.dgvUsuario.Size = new System.Drawing.Size(461, 212);
+			this.dgvUsuario.Size = new System.Drawing.Size(461, 204);
 			this.dgvUsuario.TabIndex = 1;
 			// 
-			// Eliminar
+			// btnEliminar
 			// 
-			this.Eliminar.Location = new System.Drawing.Point(166, 264);
-			this.Eliminar.Name = "Eliminar";
-			this.Eliminar.Size = new System.Drawing.Size(99, 49);
-			this.Eliminar.TabIndex = 2;
-			this.Eliminar.Text = "Eliminar";
-			this.Eliminar.UseVisualStyleBackColor = true;
-			this.Eliminar.Click += new System.EventHandler(this.EliminarClick);
+			this.btnEliminar.Location = new System.Drawing.Point(166, 264);
+			this.btnEliminar.Name = "btnEliminar";
+			this.btnEliminar.Size = new System.Drawing.Size(99, 49);
+			this.btnEliminar.TabIndex = 2;
+			this.btnEliminar.Text = "Eliminar";
+			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnEliminar.Click += new System.EventHandler(this.EliminarClick);
 			// 
-			// Modificar
+			// btnModificar
 			// 
-			this.Modificar.Location = new System.Drawing.Point(288, 264);
-			this.Modificar.Name = "Modificar";
-			this.Modificar.Size = new System.Drawing.Size(99, 49);
-			this.Modificar.TabIndex = 3;
-			this.Modificar.Text = "Modificar";
-			this.Modificar.UseVisualStyleBackColor = true;
-			this.Modificar.Click += new System.EventHandler(this.ModificarClick);
+			this.btnModificar.Location = new System.Drawing.Point(288, 264);
+			this.btnModificar.Name = "btnModificar";
+			this.btnModificar.Size = new System.Drawing.Size(99, 49);
+			this.btnModificar.TabIndex = 3;
+			this.btnModificar.Text = "Modificar";
+			this.btnModificar.UseVisualStyleBackColor = true;
+		
 			// 
-			// Consultar
+			// btnConsultar
 			// 
-			this.Consultar.Location = new System.Drawing.Point(405, 290);
-			this.Consultar.Name = "Consultar";
-			this.Consultar.Size = new System.Drawing.Size(100, 23);
-			this.Consultar.TabIndex = 4;
-			this.Consultar.Text = "Consultar";
-			this.Consultar.UseVisualStyleBackColor = true;
-			this.Consultar.Click += new System.EventHandler(this.ConsultarClick);
+			this.btnConsultar.Location = new System.Drawing.Point(405, 290);
+			this.btnConsultar.Name = "btnConsultar";
+			this.btnConsultar.Size = new System.Drawing.Size(100, 23);
+			this.btnConsultar.TabIndex = 4;
+			this.btnConsultar.Text = "Consultar";
+			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.Click += new System.EventHandler(this.ConsultarClick);
 			// 
 			// btnCerrarSesion
 			// 
@@ -142,23 +149,51 @@ namespace ProyectoEducativo
 			this.txtConsultar.Size = new System.Drawing.Size(100, 20);
 			this.txtConsultar.TabIndex = 8;
 			// 
+			// picBanderaIngles
+			// 
+			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
+			this.picBanderaIngles.Location = new System.Drawing.Point(451, 3);
+			this.picBanderaIngles.Name = "picBanderaIngles";
+			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
+			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaIngles.TabIndex = 9;
+			this.picBanderaIngles.TabStop = false;
+			this.picBanderaIngles.Click += new System.EventHandler(this.PicBanderaInglesClick);
+			// 
+			// picBanderaEspanol
+			// 
+			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
+			this.picBanderaEspanol.Location = new System.Drawing.Point(480, 3);
+			this.picBanderaEspanol.Name = "picBanderaEspanol";
+			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
+			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaEspanol.TabIndex = 10;
+			this.picBanderaEspanol.TabStop = false;
+			this.picBanderaEspanol.Click += new System.EventHandler(this.PicBanderaEspanolClick);
+			// 
 			// FormGestionUsuario
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(559, 367);
+			this.Controls.Add(this.picBanderaEspanol);
+			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.txtConsultar);
 			this.Controls.Add(this.lblEstado);
 			this.Controls.Add(this.btnVolver);
 			this.Controls.Add(this.btnCerrarSesion);
-			this.Controls.Add(this.Consultar);
-			this.Controls.Add(this.Modificar);
-			this.Controls.Add(this.Eliminar);
+			this.Controls.Add(this.btnConsultar);
+			this.Controls.Add(this.btnModificar);
+			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.dgvUsuario);
-			this.Controls.Add(this.Agregar);
+			this.Controls.Add(this.btnAgregar);
 			this.Name = "FormGestionUsuario";
 			this.Text = "FormGestionUsuario";
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

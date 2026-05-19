@@ -13,6 +13,7 @@ namespace ProyectoEducativo
         public FormAdministrador()
         {
             InitializeComponent();
+            AplicarIdioma();
         }
 
 		void GestionarUsuariosClick(object sender, EventArgs e)
@@ -20,15 +21,14 @@ namespace ProyectoEducativo
 		
 			FormGestionUsuario frmGestion = new FormGestionUsuario();
 			frmGestion.Show();
-			
-			this.Hide();
+		
 		
 		}
 		
-		
 		void ButtonGestionarModulosClick(object sender, EventArgs e)
 		{
-			 MessageBox.Show("En proceso...", "Gestión de Módulos");
+			FormGestionModulos frmGestionMod = new FormGestionModulos();
+			frmGestionMod.Show();
 		}
 		
 		void ButtonGestionarPreguntasClick(object sender, EventArgs e)
@@ -44,5 +44,35 @@ namespace ProyectoEducativo
             
             Application.Exit();
 		}
-    }
+		
+		void PicBanderaInglesClick(object sender, EventArgs e)
+		{
+    		Configuracion.EsIngles = true;
+    		AplicarIdioma();
+		}
+		void PicBanderaEspanolClick(object sender, EventArgs e)
+		{
+			Configuracion.EsIngles = false;
+    		AplicarIdioma();
+		}
+		
+		void AplicarIdioma(){
+			
+			if (Configuracion.EsIngles) {
+				lblAdmin.Text = "ADMIN MENU";
+				btnGestionarModulos.Text = "Manage Modules";
+				btnGestionarPreguntas.Text = "Manage Questions";
+				btnGestionarUsuarios.Text = "Manage Users";
+				btnCerrarSesion.Text = "Log Out";
+		} else 
+			{
+				lblAdmin.Text = "MENU ADMINISTRADOR";
+				btnGestionarModulos.Text = "Gestionar Modulos";
+				btnGestionarPreguntas.Text = "Gestionar Preguntas";
+				btnGestionarUsuarios.Text = "Gestionar Usuarios";
+				btnCerrarSesion.Text = "Cerrar Sesion";
+			}
+		
+   		 }
+}
 }

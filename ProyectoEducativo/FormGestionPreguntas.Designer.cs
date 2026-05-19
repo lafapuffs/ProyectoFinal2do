@@ -21,6 +21,10 @@ namespace ProyectoEducativo
 		private System.Windows.Forms.Button btnActualizar;
 		private System.Windows.Forms.ComboBox cmbModulos;
 		private System.Windows.Forms.Label lblEstado;
+		private System.Windows.Forms.PictureBox picBanderaIngles;
+		private System.Windows.Forms.PictureBox picBanderaEspanol;
+		private System.Windows.Forms.Button btnVolver;
+		private System.Windows.Forms.Button btnCerrarSesion;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -43,6 +47,7 @@ namespace ProyectoEducativo
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionPreguntas));
 			this.dgvPreguntas = new System.Windows.Forms.DataGridView();
 			this.btnEliminar = new System.Windows.Forms.Button();
 			this.btnModificar = new System.Windows.Forms.Button();
@@ -50,7 +55,13 @@ namespace ProyectoEducativo
 			this.btnActualizar = new System.Windows.Forms.Button();
 			this.cmbModulos = new System.Windows.Forms.ComboBox();
 			this.lblEstado = new System.Windows.Forms.Label();
+			this.picBanderaIngles = new System.Windows.Forms.PictureBox();
+			this.picBanderaEspanol = new System.Windows.Forms.PictureBox();
+			this.btnVolver = new System.Windows.Forms.Button();
+			this.btnCerrarSesion = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.dgvPreguntas)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// dgvPreguntas
@@ -73,7 +84,7 @@ namespace ProyectoEducativo
 			// 
 			// btnModificar
 			// 
-			this.btnModificar.Location = new System.Drawing.Point(740, 154);
+			this.btnModificar.Location = new System.Drawing.Point(740, 150);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(75, 23);
 			this.btnModificar.TabIndex = 3;
@@ -93,7 +104,7 @@ namespace ProyectoEducativo
 			// 
 			// btnActualizar
 			// 
-			this.btnActualizar.Location = new System.Drawing.Point(740, 199);
+			this.btnActualizar.Location = new System.Drawing.Point(740, 190);
 			this.btnActualizar.Name = "btnActualizar";
 			this.btnActualizar.Size = new System.Drawing.Size(75, 22);
 			this.btnActualizar.TabIndex = 5;
@@ -121,13 +132,61 @@ namespace ProyectoEducativo
 			this.lblEstado.Name = "lblEstado";
 			this.lblEstado.Size = new System.Drawing.Size(100, 23);
 			this.lblEstado.TabIndex = 7;
-			this.lblEstado.Text = "labelEstado";
+			this.lblEstado.Text = "Estado:";
+			// 
+			// picBanderaIngles
+			// 
+			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
+			this.picBanderaIngles.Location = new System.Drawing.Point(760, 12);
+			this.picBanderaIngles.Name = "picBanderaIngles";
+			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
+			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaIngles.TabIndex = 8;
+			this.picBanderaIngles.TabStop = false;
+			this.picBanderaIngles.Click += new System.EventHandler(this.PicBanderaInglesClick);
+			// 
+			// picBanderaEspanol
+			// 
+			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
+			this.picBanderaEspanol.Location = new System.Drawing.Point(790, 12);
+			this.picBanderaEspanol.Name = "picBanderaEspanol";
+			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
+			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaEspanol.TabIndex = 9;
+			this.picBanderaEspanol.TabStop = false;
+			this.picBanderaEspanol.Click += new System.EventHandler(this.PicBanderaEspanolClick);
+			// 
+			// btnVolver
+			// 
+			this.btnVolver.Location = new System.Drawing.Point(266, 291);
+			this.btnVolver.Name = "btnVolver";
+			this.btnVolver.Size = new System.Drawing.Size(75, 23);
+			this.btnVolver.TabIndex = 10;
+			this.btnVolver.Text = "Volver";
+			this.btnVolver.UseVisualStyleBackColor = true;
+			this.btnVolver.Click += new System.EventHandler(this.BtnVolverClick);
+			// 
+			// btnCerrarSesion
+			// 
+			this.btnCerrarSesion.Location = new System.Drawing.Point(365, 291);
+			this.btnCerrarSesion.Name = "btnCerrarSesion";
+			this.btnCerrarSesion.Size = new System.Drawing.Size(96, 23);
+			this.btnCerrarSesion.TabIndex = 11;
+			this.btnCerrarSesion.Text = "Cerrar Sesion";
+			this.btnCerrarSesion.UseVisualStyleBackColor = true;
+			this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesionClick);
 			// 
 			// FormGestionPreguntas
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(843, 321);
+			this.Controls.Add(this.btnCerrarSesion);
+			this.Controls.Add(this.btnVolver);
+			this.Controls.Add(this.picBanderaEspanol);
+			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.lblEstado);
 			this.Controls.Add(this.cmbModulos);
 			this.Controls.Add(this.btnActualizar);
@@ -135,9 +194,12 @@ namespace ProyectoEducativo
 			this.Controls.Add(this.btnModificar);
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.dgvPreguntas);
+			this.DoubleBuffered = true;
 			this.Name = "FormGestionPreguntas";
 			this.Text = "FormGestionPreguntas";
 			((System.ComponentModel.ISupportInitialize)(this.dgvPreguntas)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).EndInit();
 			this.ResumeLayout(false);
 
 		}

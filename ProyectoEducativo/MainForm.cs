@@ -14,13 +14,14 @@ namespace ProyectoEducativo
         public MainForm()
         {
             InitializeComponent();
+            AplicarIdioma();
               
         }
 		
 		void ButtonIngresarClick(object sender, EventArgs e)
 {
     string user = txtUsuario.Text.Trim();
-    string pass = txtPassword.Text;
+    string pass = txtContrasena.Text;
     int rolId = cmbRol.SelectedIndex + 1;
 
     if (user == "" || pass == "" || cmbRol.SelectedIndex == -1)
@@ -79,5 +80,32 @@ namespace ProyectoEducativo
         }
     } 
 }
+		void BtnCambiarIdiomaClick(object sender, EventArgs e)
+	{
+    // Cambia al valor opuesto (si era true pasa a false y viceversa)
+    Configuracion.EsIngles = !Configuracion.EsIngles;
+    
+    // Actualiza el formulario actual
+    	AplicarIdioma();
+	}
+		
+		void AplicarIdioma() 
+		{
+			if (Configuracion.EsIngles) {
+				lblUsuario.Text = "USER";
+				lblContrasena.Text = "PASSWORD";
+				lblRol.Text = "Select your Role";
+				btnCambiarIdioma.Text = "Change Language";
+				btnIngresar.Text = "Log In";
+			} else 
+			{
+				lblUsuario.Text = "USUARIO";
+				lblContrasena.Text = "CONTRASEÑA";
+				lblRol.Text = "Seleccione su Rol";
+				btnCambiarIdioma.Text = "Cambiar Idioma";
+				btnIngresar.Text = "Ingresar";
+			}
+		}
+		
     }
 }

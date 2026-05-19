@@ -19,6 +19,8 @@ namespace ProyectoEducativo
 		private System.Windows.Forms.Button btnB;
 		private System.Windows.Forms.Button btnC;
 		private System.Windows.Forms.Button btnD;
+		private System.Windows.Forms.PictureBox picBanderaIngles;
+		private System.Windows.Forms.PictureBox picBanderaEspanol;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -41,11 +43,16 @@ namespace ProyectoEducativo
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAntropologia));
 			this.lblPregunta = new System.Windows.Forms.Label();
 			this.btnA = new System.Windows.Forms.Button();
 			this.btnB = new System.Windows.Forms.Button();
 			this.btnC = new System.Windows.Forms.Button();
 			this.btnD = new System.Windows.Forms.Button();
+			this.picBanderaIngles = new System.Windows.Forms.PictureBox();
+			this.picBanderaEspanol = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// lblPregunta
@@ -98,11 +105,37 @@ namespace ProyectoEducativo
 			this.btnD.UseVisualStyleBackColor = true;
 			this.btnD.Click += new System.EventHandler(this.BtnDClick);
 			// 
+			// picBanderaIngles
+			// 
+			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
+			this.picBanderaIngles.Location = new System.Drawing.Point(416, 12);
+			this.picBanderaIngles.Name = "picBanderaIngles";
+			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
+			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaIngles.TabIndex = 10;
+			this.picBanderaIngles.TabStop = false;
+			this.picBanderaIngles.Click += new System.EventHandler(this.PicBanderaInglesClick);
+			// 
+			// picBanderaEspanol
+			// 
+			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
+			this.picBanderaEspanol.Location = new System.Drawing.Point(446, 12);
+			this.picBanderaEspanol.Name = "picBanderaEspanol";
+			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
+			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaEspanol.TabIndex = 11;
+			this.picBanderaEspanol.TabStop = false;
+			this.picBanderaEspanol.Click += new System.EventHandler(this.PicBanderaEspanolClick);
+			// 
 			// FormAntropologia
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(493, 318);
+			this.Controls.Add(this.picBanderaEspanol);
+			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.btnD);
 			this.Controls.Add(this.btnC);
 			this.Controls.Add(this.btnB);
@@ -110,6 +143,8 @@ namespace ProyectoEducativo
 			this.Controls.Add(this.lblPregunta);
 			this.Name = "FormAntropologia";
 			this.Text = "FormAntropologia";
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).EndInit();
 			this.ResumeLayout(false);
 
 		}

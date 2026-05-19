@@ -24,3 +24,21 @@ C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\Proye
 C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionPreguntas.resources
 C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormModificarUsuario.resources
 C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormModificarPregunta.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\bin\Debug\ProyectoEducativo.exe
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\bin\Debug\ProyectoEducativo.pdb
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.csprojResolveAssemblyReference.cache
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormAdministrador.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormAgregar.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormAgregarPregunta.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormAntropologia.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionPreguntas.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionUsuario.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormJugador.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormModificarPregunta.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormModificarUsuario.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.MainForm.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.csproj.GenerateResource.Cache
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.exe
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.pdb
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionModulos.resources
+C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormEditarModulo.resources

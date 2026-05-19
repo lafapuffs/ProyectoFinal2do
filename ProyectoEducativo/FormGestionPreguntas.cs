@@ -18,6 +18,7 @@ namespace ProyectoEducativo
             InitializeComponent();
             // Seleccionamos el primer ítem por defecto
             cmbModulos.SelectedIndex = 0; 
+            AplicarIdioma();
             CargarPreguntas();
         }
 
@@ -103,6 +104,48 @@ namespace ProyectoEducativo
 		{
 			CargarPreguntas();
 		}
+		
+		void AplicarIdioma()
+{
+    if (Configuracion.EsIngles) {
+        this.Text = "Manage Questions";
+        btnAgregar.Text = "Add";
+        btnEliminar.Text = "Delete";
+        btnModificar.Text = "Modify";
+        btnActualizar.Text = "Update";
+        btnVolver.Text = "Back";
+        btnCerrarSesion.Text = "Log Out";
+       
+    } else {
+        this.Text = "Gestión de Preguntas";
+        btnAgregar.Text = "Agregar";
+        btnEliminar.Text = "Eliminar";
+        btnModificar.Text = "Modificar";
+        btnActualizar.Text = "Actualizar";
+        btnCerrarSesion.Text = "Cerrar Sesion";
+        btnVolver.Text = "Volver";
     }
-    
+}
+		void BtnCerrarSesionClick(object sender, EventArgs e)
+		{
+	 		MessageBox.Show("Cerrando sesión...", "Aviso");
+            Application.Exit();
+		}
+		void BtnVolverClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+		void PicBanderaInglesClick(object sender, EventArgs e)
+		{
+    		Configuracion.EsIngles = true;
+    		AplicarIdioma();
+		}
+		void PicBanderaEspanolClick(object sender, EventArgs e)
+		{
+			Configuracion.EsIngles = false;
+    		AplicarIdioma();
+		}
+		
+
+    }
 }

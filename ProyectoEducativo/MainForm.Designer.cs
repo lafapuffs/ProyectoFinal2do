@@ -37,40 +37,41 @@ namespace ProyectoEducativo
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-			this.buttonIngresar = new System.Windows.Forms.Button();
-			this.txtPassword = new System.Windows.Forms.TextBox();
+			this.btnIngresar = new System.Windows.Forms.Button();
+			this.txtContrasena = new System.Windows.Forms.TextBox();
 			this.txtUsuario = new System.Windows.Forms.TextBox();
-			this.label1 = new System.Windows.Forms.Label();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblUsuario = new System.Windows.Forms.Label();
+			this.lblContrasena = new System.Windows.Forms.Label();
 			this.cmbRol = new System.Windows.Forms.ComboBox();
-			this.label3 = new System.Windows.Forms.Label();
+			this.lblRol = new System.Windows.Forms.Label();
+			this.btnCambiarIdioma = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// buttonIngresar
+			// btnIngresar
 			// 
-			this.buttonIngresar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.buttonIngresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonIngresar.ForeColor = System.Drawing.SystemColors.Control;
-			this.buttonIngresar.Location = new System.Drawing.Point(182, 290);
-			this.buttonIngresar.Margin = new System.Windows.Forms.Padding(2);
-			this.buttonIngresar.Name = "buttonIngresar";
-			this.buttonIngresar.Size = new System.Drawing.Size(118, 58);
-			this.buttonIngresar.TabIndex = 0;
-			this.buttonIngresar.Text = "Ingresar";
-			this.buttonIngresar.UseVisualStyleBackColor = false;
-			this.buttonIngresar.Click += new System.EventHandler(this.ButtonIngresarClick);
+			this.btnIngresar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnIngresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnIngresar.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnIngresar.Location = new System.Drawing.Point(182, 290);
+			this.btnIngresar.Margin = new System.Windows.Forms.Padding(2);
+			this.btnIngresar.Name = "btnIngresar";
+			this.btnIngresar.Size = new System.Drawing.Size(118, 58);
+			this.btnIngresar.TabIndex = 0;
+			this.btnIngresar.Text = "Ingresar";
+			this.btnIngresar.UseVisualStyleBackColor = false;
+			this.btnIngresar.Click += new System.EventHandler(this.ButtonIngresarClick);
 			// 
-			// txtPassword
+			// txtContrasena
 			// 
-			this.txtPassword.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-			this.txtPassword.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.txtPassword.ForeColor = System.Drawing.SystemColors.Control;
-			this.txtPassword.Location = new System.Drawing.Point(125, 150);
-			this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
-			this.txtPassword.Multiline = true;
-			this.txtPassword.Name = "txtPassword";
-			this.txtPassword.Size = new System.Drawing.Size(222, 34);
-			this.txtPassword.TabIndex = 1;
+			this.txtContrasena.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+			this.txtContrasena.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.txtContrasena.ForeColor = System.Drawing.SystemColors.Control;
+			this.txtContrasena.Location = new System.Drawing.Point(125, 150);
+			this.txtContrasena.Margin = new System.Windows.Forms.Padding(2);
+			this.txtContrasena.Multiline = true;
+			this.txtContrasena.Name = "txtContrasena";
+			this.txtContrasena.Size = new System.Drawing.Size(235, 34);
+			this.txtContrasena.TabIndex = 1;
 			// 
 			// txtUsuario
 			// 
@@ -81,32 +82,32 @@ namespace ProyectoEducativo
 			this.txtUsuario.Margin = new System.Windows.Forms.Padding(2);
 			this.txtUsuario.Multiline = true;
 			this.txtUsuario.Name = "txtUsuario";
-			this.txtUsuario.Size = new System.Drawing.Size(222, 34);
+			this.txtUsuario.Size = new System.Drawing.Size(235, 34);
 			this.txtUsuario.TabIndex = 2;
 			// 
-			// label1
+			// lblUsuario
 			// 
-			this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label1.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-			this.label1.Location = new System.Drawing.Point(125, 27);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(140, 26);
-			this.label1.TabIndex = 3;
-			this.label1.Text = "USUARIO";
+			this.lblUsuario.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.lblUsuario.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsuario.ForeColor = System.Drawing.Color.SteelBlue;
+			this.lblUsuario.Location = new System.Drawing.Point(125, 27);
+			this.lblUsuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblUsuario.Name = "lblUsuario";
+			this.lblUsuario.Size = new System.Drawing.Size(140, 26);
+			this.lblUsuario.TabIndex = 3;
+			this.lblUsuario.Text = "USUARIO";
 			// 
-			// label2
+			// lblContrasena
 			// 
-			this.label2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label2.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.ForeColor = System.Drawing.Color.SteelBlue;
-			this.label2.Location = new System.Drawing.Point(125, 121);
-			this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(183, 27);
-			this.label2.TabIndex = 4;
-			this.label2.Text = "CONTRASEÑA";
+			this.lblContrasena.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.lblContrasena.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblContrasena.ForeColor = System.Drawing.Color.SteelBlue;
+			this.lblContrasena.Location = new System.Drawing.Point(125, 121);
+			this.lblContrasena.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblContrasena.Name = "lblContrasena";
+			this.lblContrasena.Size = new System.Drawing.Size(183, 27);
+			this.lblContrasena.TabIndex = 4;
+			this.lblContrasena.Text = "CONTRASEÑA";
 			// 
 			// cmbRol
 			// 
@@ -115,25 +116,37 @@ namespace ProyectoEducativo
 			this.cmbRol.ForeColor = System.Drawing.SystemColors.Control;
 			this.cmbRol.FormattingEnabled = true;
 			this.cmbRol.Items.AddRange(new object[] {
-			"Administrador",
-			"Jugador"});
-			this.cmbRol.Location = new System.Drawing.Point(269, 223);
+			"Administrador - Admin",
+			"Jugador - Player"});
+			this.cmbRol.Location = new System.Drawing.Point(128, 223);
 			this.cmbRol.Margin = new System.Windows.Forms.Padding(2);
 			this.cmbRol.Name = "cmbRol";
-			this.cmbRol.Size = new System.Drawing.Size(92, 23);
+			this.cmbRol.Size = new System.Drawing.Size(232, 23);
 			this.cmbRol.TabIndex = 5;
 			// 
-			// label3
+			// lblRol
 			// 
-			this.label3.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-			this.label3.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label3.ForeColor = System.Drawing.Color.SteelBlue;
-			this.label3.Location = new System.Drawing.Point(113, 223);
-			this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label3.Name = "label3";
-			this.label3.Size = new System.Drawing.Size(152, 23);
-			this.label3.TabIndex = 6;
-			this.label3.Text = "Seleccione su rol:";
+			this.lblRol.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.lblRol.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblRol.ForeColor = System.Drawing.Color.SteelBlue;
+			this.lblRol.Location = new System.Drawing.Point(126, 198);
+			this.lblRol.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblRol.Name = "lblRol";
+			this.lblRol.Size = new System.Drawing.Size(174, 23);
+			this.lblRol.TabIndex = 6;
+			this.lblRol.Text = "Seleccione su rol:";
+			// 
+			// btnCambiarIdioma
+			// 
+			this.btnCambiarIdioma.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnCambiarIdioma.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnCambiarIdioma.Location = new System.Drawing.Point(575, 27);
+			this.btnCambiarIdioma.Name = "btnCambiarIdioma";
+			this.btnCambiarIdioma.Size = new System.Drawing.Size(114, 23);
+			this.btnCambiarIdioma.TabIndex = 7;
+			this.btnCambiarIdioma.Text = "Cambiar Idioma";
+			this.btnCambiarIdioma.UseVisualStyleBackColor = false;
+			this.btnCambiarIdioma.Click += new System.EventHandler(this.BtnCambiarIdiomaClick);
 			// 
 			// MainForm
 			// 
@@ -142,13 +155,14 @@ namespace ProyectoEducativo
 			this.BackColor = System.Drawing.SystemColors.ActiveCaption;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(730, 388);
-			this.Controls.Add(this.label3);
+			this.Controls.Add(this.btnCambiarIdioma);
+			this.Controls.Add(this.lblRol);
 			this.Controls.Add(this.cmbRol);
-			this.Controls.Add(this.label2);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.lblContrasena);
+			this.Controls.Add(this.lblUsuario);
 			this.Controls.Add(this.txtUsuario);
-			this.Controls.Add(this.txtPassword);
-			this.Controls.Add(this.buttonIngresar);
+			this.Controls.Add(this.txtContrasena);
+			this.Controls.Add(this.btnIngresar);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "MainForm";
 			this.Text = "ProyectoEducativo";
@@ -156,12 +170,13 @@ namespace ProyectoEducativo
 			this.PerformLayout();
 
 		}
-		private System.Windows.Forms.Label label3;
+		private System.Windows.Forms.Label lblRol;
 		private System.Windows.Forms.ComboBox cmbRol;
-		private System.Windows.Forms.Label label2;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Label lblContrasena;
+		private System.Windows.Forms.Label lblUsuario;
 		private System.Windows.Forms.TextBox txtUsuario;
-		private System.Windows.Forms.TextBox txtPassword;
-		private System.Windows.Forms.Button buttonIngresar;
+		private System.Windows.Forms.TextBox txtContrasena;
+		private System.Windows.Forms.Button btnIngresar;
+		private System.Windows.Forms.Button btnCambiarIdioma;
 	}
 }

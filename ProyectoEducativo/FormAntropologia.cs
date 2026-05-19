@@ -16,6 +16,7 @@ namespace ProyectoEducativo
         {
             InitializeComponent();
             CargarPreguntasDesdeBD();
+            AplicarIdioma();
         }
 
         // 1. Descargamos las preguntas de MySQL
@@ -26,7 +27,8 @@ namespace ProyectoEducativo
             {
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
-                    string consulta = "SELECT pregunta, opcion_a, opcion_b, opcion_c, opcion_d, respuesta_correcta FROM preguntas_antropologia";
+                    string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b, opcion_b_en, " + 
+                  "opcion_c, opcion_c_en, opcion_d, opcion_d_en, respuesta_correcta FROM preguntas_antropologia";
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexion);
                     adaptador.Fill(dtPreguntas);
                 }
@@ -48,49 +50,51 @@ namespace ProyectoEducativo
         }
 
         // 2. Colocamos el texto en los botones y el label
-        private void MostrarPregunta()
-        {
-            // Verificamos si aún hay preguntas disponibles
-            if (indiceActual < dtPreguntas.Rows.Count)
-            {
-                DataRow fila = dtPreguntas.Rows[indiceActual];
-                
-                lblPregunta.Text = fila["pregunta"].ToString();
-                btnA.Text = "A: " + fila["opcion_a"].ToString();
-                btnB.Text = "B: " + fila["opcion_b"].ToString();
-                btnC.Text = "C: " + fila["opcion_c"].ToString();
-                btnD.Text = "D: " + fila["opcion_d"].ToString();
-            }
-            else
-            {
-                MessageBox.Show("Has completado el módulo.", "Módulo Terminado");
-                this.Close(); // Cierra esta ventana y devuelve al jugador al menú
-            }
-        }
+       private void MostrarPregunta()
+{
+    if (indiceActual < dtPreguntas.Rows.Count)
+    {
+        DataRow fila = dtPreguntas.Rows[indiceActual];
+        
+        // Usamos una variable para decidir el sufijo de la columna
+        string sufijo = Configuracion.EsIngles ? "_en" : "";
+
+        // Si es inglés, buscará "pregunta_en", si es español, buscará "pregunta"
+        lblPregunta.Text = fila["pregunta" + sufijo].ToString();
+        btnA.Text = "A: " + fila["opcion_a" + sufijo].ToString();
+        btnB.Text = "B: " + fila["opcion_b" + sufijo].ToString();
+        btnC.Text = "C: " + fila["opcion_c" + sufijo].ToString();
+        btnD.Text = "D: " + fila["opcion_d" + sufijo].ToString();
+    }
+    else
+    {
+        string msj = Configuracion.EsIngles ? "Module Completed" : "Módulo Terminado";
+        MessageBox.Show(msj);
+        this.Close();
+    }
+}
 
         // 3. Lógica para evaluar si el jugador acertó
         private void VerificarRespuesta(string opcionElegida)
-        {
-            DataRow fila = dtPreguntas.Rows[indiceActual];
-            string respuestaCorrecta = fila["respuesta_correcta"].ToString();
-            
-            // Obtenemos el texto completo de la respuesta correcta para el MessageBox
-            string columnaCorrecta = "opcion_" + respuestaCorrecta.ToLower(); 
-            string textoCorrecta = fila[columnaCorrecta].ToString();
+{
+    DataRow fila = dtPreguntas.Rows[indiceActual];
+    string respuestaCorrecta = fila["respuesta_correcta"].ToString();
+    
+    // Decidir el idioma del mensaje
+    if (opcionElegida == respuestaCorrecta)
+    {
+        string msj = Configuracion.EsIngles ? "Correct!" : "¡Correcto!";
+        MessageBox.Show(msj);
+    }
+    else
+    {
+        string msj = Configuracion.EsIngles ? "Incorrect." : "Incorrecto.";
+        MessageBox.Show(msj);
+    }
 
-            if (opcionElegida == respuestaCorrecta)
-            {
-                MessageBox.Show("¡Correcto!\nLa respuesta es la " + respuestaCorrecta + ": " + textoCorrecta, "Resultado");
-            }
-            else
-            {
-                MessageBox.Show("Incorrecto.");
-            }
-
-            // Avanzamos a la siguiente pregunta y la mostramos
-            indiceActual++;
-            MostrarPregunta();
-        }
+    indiceActual++;
+    MostrarPregunta();
+}
 
         // 4. Eventos de los botones (Recuerda hacerles doble clic en el diseñador para conectarlos)
         void BtnAClick(object sender, EventArgs e)
@@ -117,5 +121,28 @@ namespace ProyectoEducativo
             btnC.Enabled = false;
             btnD.Enabled = false;
         }
+        
+        void PicBanderaInglesClick(object sender, EventArgs e)
+		{
+    		Configuracion.EsIngles = true;
+    		AplicarIdioma();
+		}
+		void PicBanderaEspanolClick(object sender, EventArgs e)
+		{
+			Configuracion.EsIngles = false;
+    		AplicarIdioma();
+		}
+		
+		void AplicarIdioma()
+{
+    // 1. Traducir el título de la ventana
+    this.Text = Configuracion.EsIngles ? "Anthropology Quiz" : "Cuestionario de Antropología";
+
+    // 2. Refrescar la pregunta actual con las nuevas columnas
+    if (dtPreguntas != null && dtPreguntas.Rows.Count > 0)
+    {
+        MostrarPregunta();
+    }
+}
     }
 }

@@ -37,79 +37,108 @@ namespace ProyectoEducativo
 		private void InitializeComponent()
 		{
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAdministrador));
-			this.label1 = new System.Windows.Forms.Label();
-			this.buttonGestionarModulos = new System.Windows.Forms.Button();
-			this.GestionarUsuarios = new System.Windows.Forms.Button();
-			this.buttonGestionarPreguntas = new System.Windows.Forms.Button();
-			this.buttonCerrarSesion = new System.Windows.Forms.Button();
+			this.lblAdmin = new System.Windows.Forms.Label();
+			this.btnGestionarModulos = new System.Windows.Forms.Button();
+			this.btnGestionarUsuarios = new System.Windows.Forms.Button();
+			this.btnGestionarPreguntas = new System.Windows.Forms.Button();
+			this.btnCerrarSesion = new System.Windows.Forms.Button();
+			this.picBanderaIngles = new System.Windows.Forms.PictureBox();
+			this.picBanderaEspanol = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).BeginInit();
 			this.SuspendLayout();
 			// 
-			// label1
+			// lblAdmin
 			// 
-			this.label1.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.SteelBlue;
-			this.label1.Location = new System.Drawing.Point(93, 55);
-			this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(324, 33);
-			this.label1.TabIndex = 0;
-			this.label1.Text = "MENU  ADMINISTRADOR";
+			this.lblAdmin.Font = new System.Drawing.Font("Papyrus", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblAdmin.ForeColor = System.Drawing.Color.SteelBlue;
+			this.lblAdmin.Location = new System.Drawing.Point(93, 55);
+			this.lblAdmin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+			this.lblAdmin.Name = "lblAdmin";
+			this.lblAdmin.Size = new System.Drawing.Size(324, 33);
+			this.lblAdmin.TabIndex = 0;
+			this.lblAdmin.Text = "MENU  ADMINISTRADOR";
+			this.lblAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
-			// buttonGestionarModulos
+			// btnGestionarModulos
 			// 
-			this.buttonGestionarModulos.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonGestionarModulos.ForeColor = System.Drawing.SystemColors.Control;
-			this.buttonGestionarModulos.Image = ((System.Drawing.Image)(resources.GetObject("buttonGestionarModulos.Image")));
-			this.buttonGestionarModulos.Location = new System.Drawing.Point(215, 131);
-			this.buttonGestionarModulos.Margin = new System.Windows.Forms.Padding(2);
-			this.buttonGestionarModulos.Name = "buttonGestionarModulos";
-			this.buttonGestionarModulos.Size = new System.Drawing.Size(90, 44);
-			this.buttonGestionarModulos.TabIndex = 1;
-			this.buttonGestionarModulos.Text = "Gestionar Modulos";
-			this.buttonGestionarModulos.UseVisualStyleBackColor = true;
-			this.buttonGestionarModulos.Click += new System.EventHandler(this.ButtonGestionarModulosClick);
+			this.btnGestionarModulos.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGestionarModulos.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnGestionarModulos.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionarModulos.Image")));
+			this.btnGestionarModulos.Location = new System.Drawing.Point(215, 131);
+			this.btnGestionarModulos.Margin = new System.Windows.Forms.Padding(2);
+			this.btnGestionarModulos.Name = "btnGestionarModulos";
+			this.btnGestionarModulos.Size = new System.Drawing.Size(90, 44);
+			this.btnGestionarModulos.TabIndex = 1;
+			this.btnGestionarModulos.Text = "Gestionar Modulos";
+			this.btnGestionarModulos.UseVisualStyleBackColor = true;
+			this.btnGestionarModulos.Click += new System.EventHandler(this.ButtonGestionarModulosClick);
 			// 
-			// GestionarUsuarios
+			// btnGestionarUsuarios
 			// 
-			this.GestionarUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GestionarUsuarios.BackgroundImage")));
-			this.GestionarUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.GestionarUsuarios.ForeColor = System.Drawing.SystemColors.Control;
-			this.GestionarUsuarios.Location = new System.Drawing.Point(79, 131);
-			this.GestionarUsuarios.Margin = new System.Windows.Forms.Padding(2);
-			this.GestionarUsuarios.Name = "GestionarUsuarios";
-			this.GestionarUsuarios.Size = new System.Drawing.Size(98, 44);
-			this.GestionarUsuarios.TabIndex = 2;
-			this.GestionarUsuarios.Text = "Gestionar Usuarios";
-			this.GestionarUsuarios.UseVisualStyleBackColor = true;
-			this.GestionarUsuarios.Click += new System.EventHandler(this.GestionarUsuariosClick);
+			this.btnGestionarUsuarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnGestionarUsuarios.BackgroundImage")));
+			this.btnGestionarUsuarios.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGestionarUsuarios.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnGestionarUsuarios.Location = new System.Drawing.Point(79, 131);
+			this.btnGestionarUsuarios.Margin = new System.Windows.Forms.Padding(2);
+			this.btnGestionarUsuarios.Name = "btnGestionarUsuarios";
+			this.btnGestionarUsuarios.Size = new System.Drawing.Size(98, 44);
+			this.btnGestionarUsuarios.TabIndex = 2;
+			this.btnGestionarUsuarios.Text = "Gestionar Usuarios";
+			this.btnGestionarUsuarios.UseVisualStyleBackColor = true;
+			this.btnGestionarUsuarios.Click += new System.EventHandler(this.GestionarUsuariosClick);
 			// 
-			// buttonGestionarPreguntas
+			// btnGestionarPreguntas
 			// 
-			this.buttonGestionarPreguntas.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonGestionarPreguntas.ForeColor = System.Drawing.SystemColors.Control;
-			this.buttonGestionarPreguntas.Image = ((System.Drawing.Image)(resources.GetObject("buttonGestionarPreguntas.Image")));
-			this.buttonGestionarPreguntas.Location = new System.Drawing.Point(342, 131);
-			this.buttonGestionarPreguntas.Margin = new System.Windows.Forms.Padding(2);
-			this.buttonGestionarPreguntas.Name = "buttonGestionarPreguntas";
-			this.buttonGestionarPreguntas.Size = new System.Drawing.Size(90, 44);
-			this.buttonGestionarPreguntas.TabIndex = 4;
-			this.buttonGestionarPreguntas.Text = "Gestionar Preguntas";
-			this.buttonGestionarPreguntas.UseVisualStyleBackColor = true;
-			this.buttonGestionarPreguntas.Click += new System.EventHandler(this.ButtonGestionarPreguntasClick);
+			this.btnGestionarPreguntas.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnGestionarPreguntas.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnGestionarPreguntas.Image = ((System.Drawing.Image)(resources.GetObject("btnGestionarPreguntas.Image")));
+			this.btnGestionarPreguntas.Location = new System.Drawing.Point(342, 131);
+			this.btnGestionarPreguntas.Margin = new System.Windows.Forms.Padding(2);
+			this.btnGestionarPreguntas.Name = "btnGestionarPreguntas";
+			this.btnGestionarPreguntas.Size = new System.Drawing.Size(90, 44);
+			this.btnGestionarPreguntas.TabIndex = 4;
+			this.btnGestionarPreguntas.Text = "Gestionar Preguntas";
+			this.btnGestionarPreguntas.UseVisualStyleBackColor = true;
+			this.btnGestionarPreguntas.Click += new System.EventHandler(this.ButtonGestionarPreguntasClick);
 			// 
-			// buttonCerrarSesion
+			// btnCerrarSesion
 			// 
-			this.buttonCerrarSesion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.buttonCerrarSesion.ForeColor = System.Drawing.SystemColors.Control;
-			this.buttonCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("buttonCerrarSesion.Image")));
-			this.buttonCerrarSesion.Location = new System.Drawing.Point(215, 293);
-			this.buttonCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
-			this.buttonCerrarSesion.Name = "buttonCerrarSesion";
-			this.buttonCerrarSesion.Size = new System.Drawing.Size(90, 44);
-			this.buttonCerrarSesion.TabIndex = 5;
-			this.buttonCerrarSesion.Text = "Cerrar Sesion";
-			this.buttonCerrarSesion.UseVisualStyleBackColor = true;
-			this.buttonCerrarSesion.Click += new System.EventHandler(this.ButtonCerrarSesionClick);
+			this.btnCerrarSesion.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.Control;
+			this.btnCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrarSesion.Image")));
+			this.btnCerrarSesion.Location = new System.Drawing.Point(215, 293);
+			this.btnCerrarSesion.Margin = new System.Windows.Forms.Padding(2);
+			this.btnCerrarSesion.Name = "btnCerrarSesion";
+			this.btnCerrarSesion.Size = new System.Drawing.Size(90, 44);
+			this.btnCerrarSesion.TabIndex = 5;
+			this.btnCerrarSesion.Text = "Cerrar Sesion";
+			this.btnCerrarSesion.UseVisualStyleBackColor = true;
+			this.btnCerrarSesion.Click += new System.EventHandler(this.ButtonCerrarSesionClick);
+			// 
+			// picBanderaIngles
+			// 
+			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
+			this.picBanderaIngles.Location = new System.Drawing.Point(433, 12);
+			this.picBanderaIngles.Name = "picBanderaIngles";
+			this.picBanderaIngles.Size = new System.Drawing.Size(24, 19);
+			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaIngles.TabIndex = 6;
+			this.picBanderaIngles.TabStop = false;
+			this.picBanderaIngles.Click += new System.EventHandler(this.PicBanderaInglesClick);
+			// 
+			// picBanderaEspanol
+			// 
+			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
+			this.picBanderaEspanol.Location = new System.Drawing.Point(463, 10);
+			this.picBanderaEspanol.Name = "picBanderaEspanol";
+			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
+			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaEspanol.TabIndex = 7;
+			this.picBanderaEspanol.TabStop = false;
+			this.picBanderaEspanol.Click += new System.EventHandler(this.PicBanderaEspanolClick);
 			// 
 			// FormAdministrador
 			// 
@@ -119,21 +148,27 @@ namespace ProyectoEducativo
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
 			this.ClientSize = new System.Drawing.Size(508, 386);
-			this.Controls.Add(this.buttonCerrarSesion);
-			this.Controls.Add(this.buttonGestionarPreguntas);
-			this.Controls.Add(this.GestionarUsuarios);
-			this.Controls.Add(this.buttonGestionarModulos);
-			this.Controls.Add(this.label1);
+			this.Controls.Add(this.picBanderaEspanol);
+			this.Controls.Add(this.picBanderaIngles);
+			this.Controls.Add(this.btnCerrarSesion);
+			this.Controls.Add(this.btnGestionarPreguntas);
+			this.Controls.Add(this.btnGestionarUsuarios);
+			this.Controls.Add(this.btnGestionarModulos);
+			this.Controls.Add(this.lblAdmin);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "FormAdministrador";
 			this.Text = "FormAdministrador";
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).EndInit();
 			this.ResumeLayout(false);
 
 		}
-		private System.Windows.Forms.Button buttonCerrarSesion;
-		private System.Windows.Forms.Button buttonGestionarPreguntas;
-		private System.Windows.Forms.Button GestionarUsuarios;
-		private System.Windows.Forms.Button buttonGestionarModulos;
-		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.Button btnCerrarSesion;
+		private System.Windows.Forms.Button btnGestionarPreguntas;
+		private System.Windows.Forms.Button btnGestionarUsuarios;
+		private System.Windows.Forms.Button btnGestionarModulos;
+		private System.Windows.Forms.Label lblAdmin;
+		private System.Windows.Forms.PictureBox picBanderaIngles;
+		private System.Windows.Forms.PictureBox picBanderaEspanol;
 	}
 }

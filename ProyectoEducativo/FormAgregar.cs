@@ -15,7 +15,7 @@ namespace ProyectoEducativo
 		public FormAgregar()
 		{
 			InitializeComponent();
-			
+			AplicarIdioma();		
 			
 			}
 		
@@ -71,6 +71,34 @@ namespace ProyectoEducativo
 				MessageBox.Show(string.Format("Error al agregar: {0}", ex.Message));
 			}
 		}
+		void PicBanderaInglesClick(object sender, EventArgs e)
+		{
+    		Configuracion.EsIngles = true;
+    		AplicarIdioma();
+		}
+		void PicBanderaEspanolClick(object sender, EventArgs e)
+		{
+			Configuracion.EsIngles = false;
+    		AplicarIdioma();
+		}
+		
+		void AplicarIdioma() {
+			if (Configuracion.EsIngles) {
+				lblRol.Text = "Enter Role:";
+				lblNombre.Text = "Enter Name:";
+				lblClave.Text = "Enter Password:";
+				btnAceptar.Text = "Accept";
+				btnCancelar.Text = "Cancel";
+			} else {
+				lblRol.Text = "Ingrese Rol:";
+				lblNombre.Text = "Ingrese Nombre:";
+				lblClave.Text = "Ingrese Clave:";
+				btnAceptar.Text = "Aceptar";
+				btnCancelar.Text = "Cancelar";
+			}
+			
+		}
+		
 		}
 		
 		}

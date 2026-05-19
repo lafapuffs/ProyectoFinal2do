@@ -16,6 +16,7 @@ namespace ProyectoEducativo
 		{
 			
 			InitializeComponent();
+			AplicarIdioma();
 			CargarUsuarios();
 			
 		}
@@ -46,10 +47,7 @@ namespace ProyectoEducativo
 		
 		void BtnVolverClick(object sender, EventArgs e)
 		{
-			
-			this.Hide();
-			FormAdministrador frmAdmin = new FormAdministrador();
-             frmAdmin.Show();
+			this.Close();
 			
 		}
 		void BtnCerrarSesionClick(object sender, EventArgs e)
@@ -111,17 +109,34 @@ namespace ProyectoEducativo
 		
 		
 		
-		void ModificarClick(object sender, EventArgs e)
+			void BtnModificarClick(object sender, EventArgs e)
 {
-		int id = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["id"].Value);
-		string nom = dgvUsuario.SelectedRows[0].Cells["nombre"].Value.ToString();
-		string cla = dgvUsuario.SelectedRows[0].Cells["clave"].Value.ToString();
-		int rol = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["rol"].Value);
-
-
-		FormModificarUsuario frm = new FormModificarUsuario(id, nom, cla, rol);
-		frm.ShowDialog();
+    // 1. Verificamos que haya al menos una fila seleccionada
+   		 if (dgvUsuario.SelectedRows.Count > 0)
+    {
+        // Solo si hay una fila, extraemos el ID
+       	 int id = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["id"].Value);
+        string nombre = dgvUsuario.SelectedRows[0].Cells["nombre"].Value.ToString();
+		string clave = dgvUsuario.SelectedRows[0].Cells["clave"].Value.ToString();
+		int rol = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["id_rol"].Value);
+       	 
+       	 
+       	 FormModificarUsuario frm = new FormModificarUsuario(id, nombre, clave, rol);
+       	 if (frm.ShowDialog() == DialogResult.OK)
+        {
+          	  CargarUsuarios(); // Recargamos la tabla
+        }
     }
+   		 else
+    {
+        // 2. Si no hay nada seleccionado, le avisamos al usuario en el idioma actual
+        if (Configuracion.EsIngles) {
+            MessageBox.Show("Please select a user from the list first.", "Selection Required");
+        } else {
+            MessageBox.Show("Por favor, seleccione un usuario de la lista primero.", "Selección Requerida");
+        }
+    }
+}
 		void ConsultarClick(object sender, EventArgs e)
 		{
    
@@ -159,6 +174,45 @@ namespace ProyectoEducativo
         MessageBox.Show("Error al consultar: " + ex.Message);
     }
 }
+		void PicBanderaInglesClick(object sender, EventArgs e)
+		{
+    		Configuracion.EsIngles = true;
+    		AplicarIdioma();
+		}
+		void PicBanderaEspanolClick(object sender, EventArgs e)
+		{
+			Configuracion.EsIngles = false;
+    		AplicarIdioma();
 		}
 		
+		void AplicarIdioma(){
+			
+			if (Configuracion.EsIngles) {
+				btnCerrarSesion.Text = "Log Out";
+				btnVolver.Text = "Back";
+				btnAgregar.Text = "Add";
+				btnModificar.Text = "Modify";
+				btnEliminar.Text = "Delete";
+				btnConsultar.Text = "Consult";
+			} else
+			{
+				btnCerrarSesion.Text = "Cerrar Sesion";
+				btnVolver.Text = "Volver";
+				btnAgregar.Text = "Agregar";
+				btnModificar.Text = "Modificar";
+				btnEliminar.Text = "Eliminar";
+				btnConsultar.Text = "Consultar";
+			}
+		
+		}
+		
+		void DgvUsuariosSelectionChanged(object sender, EventArgs e)
+{
+    // Si hay selección, activamos los botones; si no, los apagamos
+    bool haySeleccion = dgvUsuario.SelectedRows.Count > 0;
+    btnModificar.Enabled = haySeleccion;
+    btnEliminar.Enabled = haySeleccion;
+}
+		
+}
 }

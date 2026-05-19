@@ -10,6 +10,7 @@ namespace ProyectoEducativo
 			public FormJugador(string nombre) 
 	{
     		InitializeComponent();
+    		AplicarIdioma();
     
 	}
         
@@ -40,6 +41,35 @@ namespace ProyectoEducativo
 				
     		FormAntropologia frmAntropologia = new FormAntropologia();
     		frmAntropologia.ShowDialog(); 
-		}	
+		}
+			void PicBanderaInglesClick(object sender, EventArgs e)
+		{
+    		Configuracion.EsIngles = true;
+    		AplicarIdioma();
+		}
+		void PicBanderaEspanolClick(object sender, EventArgs e)
+		{
+			Configuracion.EsIngles = false;
+    		AplicarIdioma();
+		}
+		
+		void AplicarIdioma(){
+			
+			if (Configuracion.EsIngles) {
+				lblJugador.Text = "PLAYER MENU";
+				btnModuloAntropologia.Text = "Anthropology Module";
+				btnModuloArquitectura.Text = "Arquitecture Module";
+				btnModuloCalculo.Text = "Calculus Module";
+				btnModuloDeporte.Text = "Sports Module";
+				btnCerrarSesion.Text = "Log Out";
+			} else {
+				lblJugador.Text = "MENU JUGADOR";
+				btnModuloAntropologia.Text = "Modulo Antroplogia";
+				btnModuloArquitectura.Text = "Modulo Arquitectura";
+				btnModuloCalculo.Text = "Modulo Calculo";
+				btnModuloDeporte.Text = "Modulo Deporte";
+				btnCerrarSesion.Text = "Cerrar Sesion";
+			}
+		}
     }
 }

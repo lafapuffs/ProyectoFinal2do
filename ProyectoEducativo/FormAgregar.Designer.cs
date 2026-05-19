@@ -22,6 +22,8 @@ namespace ProyectoEducativo
 		private System.Windows.Forms.ComboBox cmbRol;
 		private System.Windows.Forms.Label lblRol;
 		private System.Windows.Forms.Button btnAceptar;
+		private System.Windows.Forms.PictureBox picBanderaIngles;
+		private System.Windows.Forms.PictureBox picBanderaEspanol;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -44,6 +46,7 @@ namespace ProyectoEducativo
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregar));
 			this.btnCancelar = new System.Windows.Forms.Button();
 			this.lblNombre = new System.Windows.Forms.Label();
 			this.txtNombre = new System.Windows.Forms.TextBox();
@@ -52,11 +55,15 @@ namespace ProyectoEducativo
 			this.cmbRol = new System.Windows.Forms.ComboBox();
 			this.lblRol = new System.Windows.Forms.Label();
 			this.btnAceptar = new System.Windows.Forms.Button();
+			this.picBanderaIngles = new System.Windows.Forms.PictureBox();
+			this.picBanderaEspanol = new System.Windows.Forms.PictureBox();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(149, 226);
+			this.btnCancelar.Location = new System.Drawing.Point(149, 212);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(78, 23);
 			this.btnCancelar.TabIndex = 1;
@@ -98,8 +105,8 @@ namespace ProyectoEducativo
 			// 
 			this.cmbRol.FormattingEnabled = true;
 			this.cmbRol.Items.AddRange(new object[] {
-			"Administrador",
-			"Jugador"});
+			"Administrador - Admin",
+			"Jugador - Player"});
 			this.cmbRol.Location = new System.Drawing.Point(68, 170);
 			this.cmbRol.Name = "cmbRol";
 			this.cmbRol.Size = new System.Drawing.Size(156, 21);
@@ -115,7 +122,7 @@ namespace ProyectoEducativo
 			// 
 			// btnAceptar
 			// 
-			this.btnAceptar.Location = new System.Drawing.Point(68, 226);
+			this.btnAceptar.Location = new System.Drawing.Point(68, 212);
 			this.btnAceptar.Name = "btnAceptar";
 			this.btnAceptar.Size = new System.Drawing.Size(75, 23);
 			this.btnAceptar.TabIndex = 8;
@@ -123,11 +130,36 @@ namespace ProyectoEducativo
 			this.btnAceptar.UseVisualStyleBackColor = true;
 			this.btnAceptar.Click += new System.EventHandler(this.BtnAceptarClick);
 			// 
+			// picBanderaIngles
+			// 
+			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
+			this.picBanderaIngles.Location = new System.Drawing.Point(259, 12);
+			this.picBanderaIngles.Name = "picBanderaIngles";
+			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
+			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaIngles.TabIndex = 9;
+			this.picBanderaIngles.TabStop = false;
+			// 
+			// picBanderaEspanol
+			// 
+			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
+			this.picBanderaEspanol.Location = new System.Drawing.Point(289, 12);
+			this.picBanderaEspanol.Name = "picBanderaEspanol";
+			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
+			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+			this.picBanderaEspanol.TabIndex = 10;
+			this.picBanderaEspanol.TabStop = false;
+			this.picBanderaEspanol.Click += new System.EventHandler(this.PicBanderaEspanolClick);
+			// 
 			// FormAgregar
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(343, 261);
+			this.Controls.Add(this.picBanderaEspanol);
+			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.btnAceptar);
 			this.Controls.Add(this.lblRol);
 			this.Controls.Add(this.cmbRol);
@@ -138,6 +170,8 @@ namespace ProyectoEducativo
 			this.Controls.Add(this.btnCancelar);
 			this.Name = "FormAgregar";
 			this.Text = "FormAgregar";
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaIngles)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.picBanderaEspanol)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
