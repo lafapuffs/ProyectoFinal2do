@@ -78,10 +78,10 @@ namespace ProyectoEducativo
 			// 
 			this.dgvUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dgvUsuario.Location = new System.Drawing.Point(44, 30);
+			this.dgvUsuario.Location = new System.Drawing.Point(27, 30);
 			this.dgvUsuario.Name = "dgvUsuario";
 			this.dgvUsuario.ReadOnly = true;
-			this.dgvUsuario.Size = new System.Drawing.Size(461, 204);
+			this.dgvUsuario.Size = new System.Drawing.Size(494, 204);
 			this.dgvUsuario.TabIndex = 1;
 			// 
 			// btnEliminar
@@ -102,7 +102,6 @@ namespace ProyectoEducativo
 			this.btnModificar.TabIndex = 3;
 			this.btnModificar.Text = "Modificar";
 			this.btnModificar.UseVisualStyleBackColor = true;
-		
 			// 
 			// btnConsultar
 			// 

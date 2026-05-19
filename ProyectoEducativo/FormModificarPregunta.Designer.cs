@@ -44,6 +44,7 @@ namespace ProyectoEducativo
 		private System.Windows.Forms.Label lblB;
 		private System.Windows.Forms.Label lblA;
 		private System.Windows.Forms.Label lblPregunta;
+		private System.Windows.Forms.Button btnSeleccionarImagen;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -96,6 +97,7 @@ namespace ProyectoEducativo
 			this.lblB = new System.Windows.Forms.Label();
 			this.lblA = new System.Windows.Forms.Label();
 			this.lblPregunta = new System.Windows.Forms.Label();
+			this.btnSeleccionarImagen = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label10
@@ -118,7 +120,7 @@ namespace ProyectoEducativo
 			// 
 			this.txtImagenRuta.Location = new System.Drawing.Point(303, 200);
 			this.txtImagenRuta.Name = "txtImagenRuta";
-			this.txtImagenRuta.Size = new System.Drawing.Size(100, 20);
+			this.txtImagenRuta.Size = new System.Drawing.Size(215, 20);
 			this.txtImagenRuta.TabIndex = 57;
 			// 
 			// txtPreguntaEn
@@ -222,12 +224,13 @@ namespace ProyectoEducativo
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(390, 230);
+			this.btnCancelar.Location = new System.Drawing.Point(390, 268);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(81, 22);
 			this.btnCancelar.TabIndex = 43;
 			this.btnCancelar.Text = "Cancelar";
 			this.btnCancelar.UseVisualStyleBackColor = true;
+			this.btnCancelar.Click += new System.EventHandler(this.BtnCancelarClick);
 			// 
 			// lblRespuesta
 			// 
@@ -274,12 +277,13 @@ namespace ProyectoEducativo
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Location = new System.Drawing.Point(303, 230);
+			this.btnGuardar.Location = new System.Drawing.Point(303, 268);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(75, 23);
 			this.btnGuardar.TabIndex = 36;
 			this.btnGuardar.Text = "Guardar";
 			this.btnGuardar.UseVisualStyleBackColor = true;
+			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarCambiosClick);
 			// 
 			// cmbCorrecta
 			// 
@@ -334,11 +338,22 @@ namespace ProyectoEducativo
 			this.lblPregunta.TabIndex = 30;
 			this.lblPregunta.Text = "Pregunta a agregar:";
 			// 
+			// btnSeleccionarImagen
+			// 
+			this.btnSeleccionarImagen.Location = new System.Drawing.Point(303, 230);
+			this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+			this.btnSeleccionarImagen.Size = new System.Drawing.Size(75, 23);
+			this.btnSeleccionarImagen.TabIndex = 60;
+			this.btnSeleccionarImagen.Text = "Buscar";
+			this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+			this.btnSeleccionarImagen.Click += new System.EventHandler(this.BtnSeleccionarImagenClick);
+			// 
 			// FormModificarPregunta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(530, 319);
+			this.Controls.Add(this.btnSeleccionarImagen);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.txtImagenRuta);

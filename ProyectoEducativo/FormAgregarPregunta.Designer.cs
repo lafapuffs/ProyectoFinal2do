@@ -44,6 +44,7 @@ namespace ProyectoEducativo
 		private System.Windows.Forms.TextBox txtImagenRuta;
 		private System.Windows.Forms.Label label9;
 		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.Button btnSeleccionarImagen;
 		
 		/// <summary>
 		/// Disposes resources used by the form.
@@ -96,6 +97,7 @@ namespace ProyectoEducativo
 			this.txtImagenRuta = new System.Windows.Forms.TextBox();
 			this.label9 = new System.Windows.Forms.Label();
 			this.label10 = new System.Windows.Forms.Label();
+			this.btnSeleccionarImagen = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// lblPregunta
@@ -153,7 +155,7 @@ namespace ProyectoEducativo
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Location = new System.Drawing.Point(254, 245);
+			this.btnGuardar.Location = new System.Drawing.Point(254, 283);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(75, 23);
 			this.btnGuardar.TabIndex = 6;
@@ -206,12 +208,13 @@ namespace ProyectoEducativo
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(341, 245);
+			this.btnCancelar.Location = new System.Drawing.Point(341, 284);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(81, 22);
 			this.btnCancelar.TabIndex = 13;
 			this.btnCancelar.Text = "Cancelar";
 			this.btnCancelar.UseVisualStyleBackColor = true;
+			this.btnCancelar.Click += new System.EventHandler(this.BtnCancelarClick);
 			// 
 			// txtAEn
 			// 
@@ -259,7 +262,7 @@ namespace ProyectoEducativo
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(-1, 265);
+			this.label3.Location = new System.Drawing.Point(0, 265);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(52, 23);
 			this.label3.TabIndex = 20;
@@ -267,7 +270,7 @@ namespace ProyectoEducativo
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(-1, 49);
+			this.label4.Location = new System.Drawing.Point(0, 49);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(52, 23);
 			this.label4.TabIndex = 21;
@@ -275,7 +278,7 @@ namespace ProyectoEducativo
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(-1, 142);
+			this.label5.Location = new System.Drawing.Point(0, 142);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(52, 23);
 			this.label5.TabIndex = 22;
@@ -283,7 +286,7 @@ namespace ProyectoEducativo
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(-1, 73);
+			this.label6.Location = new System.Drawing.Point(0, 73);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(52, 23);
 			this.label6.TabIndex = 23;
@@ -291,7 +294,7 @@ namespace ProyectoEducativo
 			// 
 			// label7
 			// 
-			this.label7.Location = new System.Drawing.Point(-1, 226);
+			this.label7.Location = new System.Drawing.Point(0, 226);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(52, 23);
 			this.label7.TabIndex = 24;
@@ -299,7 +302,7 @@ namespace ProyectoEducativo
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(-1, 288);
+			this.label8.Location = new System.Drawing.Point(0, 288);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(52, 23);
 			this.label8.TabIndex = 25;
@@ -316,7 +319,7 @@ namespace ProyectoEducativo
 			// 
 			this.txtImagenRuta.Location = new System.Drawing.Point(254, 215);
 			this.txtImagenRuta.Name = "txtImagenRuta";
-			this.txtImagenRuta.Size = new System.Drawing.Size(100, 20);
+			this.txtImagenRuta.Size = new System.Drawing.Size(263, 20);
 			this.txtImagenRuta.TabIndex = 27;
 			// 
 			// label9
@@ -335,11 +338,22 @@ namespace ProyectoEducativo
 			this.label10.TabIndex = 29;
 			this.label10.Text = "Question to Add";
 			// 
+			// btnSeleccionarImagen
+			// 
+			this.btnSeleccionarImagen.Location = new System.Drawing.Point(254, 245);
+			this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
+			this.btnSeleccionarImagen.Size = new System.Drawing.Size(75, 23);
+			this.btnSeleccionarImagen.TabIndex = 30;
+			this.btnSeleccionarImagen.Text = "Buscar";
+			this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+			this.btnSeleccionarImagen.Click += new System.EventHandler(this.BtnSeleccionarImagenClick);
+			// 
 			// FormAgregarPregunta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(529, 352);
+			this.Controls.Add(this.btnSeleccionarImagen);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.txtImagenRuta);

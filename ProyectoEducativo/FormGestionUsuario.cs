@@ -27,7 +27,7 @@ namespace ProyectoEducativo
 				
 				using (MySqlConnection conexion = new MySqlConnection(cadenaConexion)) 
 				{
-					string consulta = "SELECT  id, nombre, clave, rol from usuario";
+					string consulta = "SELECT id, nombre, clave, rol, puntaje FROM usuario";
 					
 					conexion.Open();
 					
@@ -148,7 +148,7 @@ namespace ProyectoEducativo
     }
     
 
-    string consulta = "SELECT id, nombre, clave, rol FROM usuario WHERE nombre LIKE @busqueda";
+    string consulta = "SELECT id, nombre, clave, rol, puntaje FROM usuario WHERE nombre LIKE @busqueda";
 
     try
     {

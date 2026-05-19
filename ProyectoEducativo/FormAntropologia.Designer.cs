@@ -58,16 +58,16 @@ namespace ProyectoEducativo
 			// lblPregunta
 			// 
 			this.lblPregunta.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPregunta.Location = new System.Drawing.Point(133, 30);
+			this.lblPregunta.Location = new System.Drawing.Point(96, 32);
 			this.lblPregunta.Name = "lblPregunta";
-			this.lblPregunta.Size = new System.Drawing.Size(244, 66);
+			this.lblPregunta.Size = new System.Drawing.Size(375, 134);
 			this.lblPregunta.TabIndex = 0;
 			this.lblPregunta.Text = "Pregunta";
 			this.lblPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnA
 			// 
-			this.btnA.Location = new System.Drawing.Point(96, 111);
+			this.btnA.Location = new System.Drawing.Point(96, 198);
 			this.btnA.Name = "btnA";
 			this.btnA.Size = new System.Drawing.Size(138, 53);
 			this.btnA.TabIndex = 1;
@@ -77,7 +77,7 @@ namespace ProyectoEducativo
 			// 
 			// btnB
 			// 
-			this.btnB.Location = new System.Drawing.Point(272, 111);
+			this.btnB.Location = new System.Drawing.Point(333, 198);
 			this.btnB.Name = "btnB";
 			this.btnB.Size = new System.Drawing.Size(138, 53);
 			this.btnB.TabIndex = 2;
@@ -87,7 +87,7 @@ namespace ProyectoEducativo
 			// 
 			// btnC
 			// 
-			this.btnC.Location = new System.Drawing.Point(96, 198);
+			this.btnC.Location = new System.Drawing.Point(96, 284);
 			this.btnC.Name = "btnC";
 			this.btnC.Size = new System.Drawing.Size(138, 53);
 			this.btnC.TabIndex = 3;
@@ -97,7 +97,7 @@ namespace ProyectoEducativo
 			// 
 			// btnD
 			// 
-			this.btnD.Location = new System.Drawing.Point(272, 198);
+			this.btnD.Location = new System.Drawing.Point(333, 284);
 			this.btnD.Name = "btnD";
 			this.btnD.Size = new System.Drawing.Size(138, 53);
 			this.btnD.TabIndex = 4;
@@ -109,7 +109,7 @@ namespace ProyectoEducativo
 			// 
 			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
-			this.picBanderaIngles.Location = new System.Drawing.Point(416, 12);
+			this.picBanderaIngles.Location = new System.Drawing.Point(510, 364);
 			this.picBanderaIngles.Name = "picBanderaIngles";
 			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
 			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +121,7 @@ namespace ProyectoEducativo
 			// 
 			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
-			this.picBanderaEspanol.Location = new System.Drawing.Point(446, 12);
+			this.picBanderaEspanol.Location = new System.Drawing.Point(540, 364);
 			this.picBanderaEspanol.Name = "picBanderaEspanol";
 			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
 			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +133,7 @@ namespace ProyectoEducativo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(493, 318);
+			this.ClientSize = new System.Drawing.Size(568, 397);
 			this.Controls.Add(this.picBanderaEspanol);
 			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.btnD);

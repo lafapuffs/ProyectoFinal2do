@@ -108,5 +108,10 @@ namespace ProyectoEducativo
                 txtImagenRuta.Text = buscar.FileName;
             }
         }
+		void BtnCancelarClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+        
     }
 }

@@ -42,3 +42,8 @@ C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\P
 C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.pdb
 C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionModulos.resources
 C:\Users\usuario\Desktop\Proyecto\ProyectoFinal2do\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormEditarModulo.resources
+C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormEditarModulo.resources
+C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormGestionModulos.resources
+C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormDeporte.resources
+C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormCalculo.resources
+C:\Users\rafae\OneDrive\Documentos\SharpDevelop Projects\ProyectoEducativo\ProyectoEducativo\obj\Debug\ProyectoEducativo.FormArquitectura.resources

@@ -6,13 +6,13 @@ using MySql.Data.MySqlClient;
 
 namespace ProyectoEducativo
 {
-    public partial class FormAntropologia : Form
+    public partial class FormArquitectura : Form
     {
         private string cadenaConexion = "Server=localhost;Database=proyectin;Uid=root;Pwd=;";
         private DataTable dtPreguntas; // Guarda todas las preguntas en memoria
         private int indiceActual = 0;  // Controla en qué pregunta vamos
 
-        public FormAntropologia()
+        public FormArquitectura()
         {
             InitializeComponent();
             CargarPreguntasDesdeBD();
@@ -27,8 +27,9 @@ namespace ProyectoEducativo
             {
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
-                    string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b, opcion_b_en, " + 
-                  "opcion_c, opcion_c_en, opcion_d, opcion_d_en, respuesta_correcta FROM preguntas_antropologia";
+                    // Solo agrega ", imagen_ruta" a tu string de consulta
+string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b, opcion_b_en, " + 
+                  "opcion_c, opcion_c_en, opcion_d, opcion_d_en, respuesta_correcta, imagen_ruta FROM preguntas_arquitectura";
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexion);
                     adaptador.Fill(dtPreguntas);
                 }
@@ -65,6 +66,19 @@ namespace ProyectoEducativo
         btnB.Text = "B: " + fila["opcion_b" + sufijo].ToString();
         btnC.Text = "C: " + fila["opcion_c" + sufijo].ToString();
         btnD.Text = "D: " + fila["opcion_d" + sufijo].ToString();
+        
+        // Incluyendo la PictureBox para mostrar la imagen de la pregunta
+        string rutaImagen = fila["imagen_ruta"].ToString();
+
+        if (!string.IsNullOrEmpty(rutaImagen) && System.IO.File.Exists(rutaImagen))
+        {
+            picPreguntas.ImageLocation = rutaImagen;
+            picPreguntas.SizeMode = PictureBoxSizeMode.StretchImage; // Asegura que quepa en el cuadro
+        }
+        else
+        {
+            picPreguntas.Image = null; // Limpia la imagen si no existe la ruta o el archivo
+        }
     }
     else
     {
@@ -99,7 +113,9 @@ namespace ProyectoEducativo
 
 	private void ActualizarPuntajeUsuario(int puntos)
 {
-    // Usamos el ID global y sumamos/restamos
+    // MENSAJE DE DEPURACIÓN: Verifica qué ID está usando
+    MessageBox.Show("Actualizando ID: " + Configuracion.IdUsuarioLogueado);
+
     string sql = "UPDATE usuario SET puntaje = GREATEST(0, puntaje + @puntos) WHERE id = @id";
     
     using (MySqlConnection con = new MySqlConnection(cadenaConexion)) {
@@ -107,7 +123,11 @@ namespace ProyectoEducativo
         cmd.Parameters.AddWithValue("@puntos", puntos);
         cmd.Parameters.AddWithValue("@id", Configuracion.IdUsuarioLogueado);
         con.Open();
-        cmd.ExecuteNonQuery();
+        int filasAfectadas = cmd.ExecuteNonQuery(); // Guardamos el resultado
+        
+        if (filasAfectadas == 0) {
+             MessageBox.Show("¡Advertencia! No se actualizó ningún usuario. ¿Es el ID correcto?");
+        }
     }
 }
 
@@ -151,8 +171,8 @@ namespace ProyectoEducativo
 		void AplicarIdioma()
 {
     // 1. Traducir el título de la ventana
-    this.Text = Configuracion.EsIngles ? "Anthropology Quiz" : "Cuestionario de Antropología";
-
+    this.Text = Configuracion.EsIngles ? "Sports Quiz" : "Cuestionario de Deporte";
+    
     // 2. Refrescar la pregunta actual con las nuevas columnas
     if (dtPreguntas != null && dtPreguntas.Rows.Count > 0)
     {

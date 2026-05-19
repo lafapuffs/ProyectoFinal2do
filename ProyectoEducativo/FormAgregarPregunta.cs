@@ -22,7 +22,7 @@ namespace ProyectoEducativo
        
 
         // Botón para seleccionar imagen (Necesario para el módulo de Arquitectura)
-        /*void BtnSeleccionarImagenClick(object sender, EventArgs e)
+        void BtnSeleccionarImagenClick(object sender, EventArgs e)
         {
             OpenFileDialog buscar = new OpenFileDialog();
             buscar.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png";
@@ -31,7 +31,8 @@ namespace ProyectoEducativo
             {
                 txtImagenRuta.Text = buscar.FileName;
             }
-        } */
+        }
+        
 
         void BtnGuardarClick(object sender, EventArgs e)
         {
@@ -83,5 +84,9 @@ namespace ProyectoEducativo
                 MessageBox.Show("Error al guardar: " + ex.Message);
             }
         }
+		void BtnCancelarClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
     }
 }	

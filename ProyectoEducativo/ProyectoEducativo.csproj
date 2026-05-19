@@ -67,6 +67,18 @@
     <Compile Include="FormAntropologia.Designer.cs">
       <DependentUpon>FormAntropologia.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormArquitectura.cs" />
+    <Compile Include="FormArquitectura.Designer.cs">
+      <DependentUpon>FormArquitectura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCalculo.cs" />
+    <Compile Include="FormCalculo.Designer.cs">
+      <DependentUpon>FormCalculo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeporte.cs" />
+    <Compile Include="FormDeporte.Designer.cs">
+      <DependentUpon>FormDeporte.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormEditarModulo.cs" />
     <Compile Include="FormEditarModulo.Designer.cs">
       <DependentUpon>FormEditarModulo.cs</DependentUpon>
@@ -115,6 +127,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAntropologia.resx">
       <DependentUpon>FormAntropologia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormArquitectura.resx">
+      <DependentUpon>FormArquitectura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCalculo.resx">
+      <DependentUpon>FormCalculo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeporte.resx">
+      <DependentUpon>FormDeporte.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEditarModulo.resx">
       <DependentUpon>FormEditarModulo.cs</DependentUpon>

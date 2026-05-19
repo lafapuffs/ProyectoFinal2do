@@ -32,48 +32,48 @@ namespace ProyectoEducativo
     {
         try 
         {
-            using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
+          using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
+{
+    conexion.Open();
+    string consulta = "SELECT id FROM usuario WHERE nombre = @user AND clave = @pass AND rol = @rol";
+    
+    // Declaramos 'cmd' AQUÍ, dentro del bloque donde 'conexion' está vivo
+    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+    {
+        cmd.Parameters.AddWithValue("@user", user);
+        cmd.Parameters.AddWithValue("@pass", pass);
+        cmd.Parameters.AddWithValue("@rol", rolId);
+
+        object resultado = cmd.ExecuteScalar();
+
+        if (resultado != null)
+        {
+            Configuracion.IdUsuarioLogueado = Convert.ToInt32(resultado);
+            MessageBox.Show("¡Bienvenido " + user + "!");
+            this.Hide();
+            switch (rolId)
             {
-                conexion.Open();
-                string consulta = "SELECT COUNT(*) FROM usuario WHERE nombre = @user AND clave = @pass AND rol = @rol";
-                
-                MySqlCommand cmd = new MySqlCommand(consulta, conexion);
-                cmd.Parameters.AddWithValue("@user", user);
-                cmd.Parameters.AddWithValue("@pass", pass);
-                cmd.Parameters.AddWithValue("@rol", rolId);
-
-                int resultado = Convert.ToInt32(cmd.ExecuteScalar());
-
-         
-                if (resultado > 0)
-                {
-                    MessageBox.Show("¡Bienvenido " + user + "!");
-                    this.Hide();
-
-                    switch (rolId)
-                    {
-                        case 1: // Administrador
-                            FormAdministrador admin = new FormAdministrador();
-                            admin.Show();
-                            break;
-                        case 2: // Jugador
-    		
-   						 FormJugador jugador = new FormJugador(user); 
-   						 jugador.Show();
-   						 break;
-                        default:
-                            MessageBox.Show("Rol no reconocido.");
-                            this.Show();
-                            break;
-                    }
-                } 
-                else 
-                {
-                    MessageBox.Show("EL USUARIO NO EXISTE O EL ROL ES INCORRECTO", "ERROR");
-                }
-                
-            } 
-        } 
+                case 1: // Administrador
+                    FormAdministrador admin = new FormAdministrador();
+                    admin.Show();
+                    break;
+                case 2: // Jugador
+                    FormJugador jugador = new FormJugador(user); 
+                    jugador.Show();
+                    break;
+                default:
+                    MessageBox.Show("Rol no reconocido.");
+                    this.Show(); // Regresamos al login si el rol no es válido
+                    break;
+            }
+        }
+        else
+        {
+            MessageBox.Show("EL USUARIO NO EXISTE O EL ROL ES INCORRECTO", "ERROR");
+        }
+    }
+}
+        }
         catch (Exception ex) 
         {
             MessageBox.Show("Error de conexión: " + ex.Message);

@@ -16,12 +16,18 @@ namespace ProyectoEducativo
         
         void ButtonModuloCalculoClick(object sender, EventArgs e)
         {
-             MessageBox.Show("Accediendo a: Cálculo.", "Módulo Iniciado");
+             MessageBox.Show("Accediendo a: Deporte.", "Módulo Iniciado");
+             
+             FormCalculo frmCalculo = new FormCalculo();
+    		frmCalculo.ShowDialog(); 
         }
 
         void ButtonModuloDeporteClick(object sender, EventArgs e)
         {
              MessageBox.Show("Accediendo a: Deporte.", "Módulo Iniciado");
+             
+             FormDeporte frmDeporte = new FormDeporte();
+    		frmDeporte.ShowDialog(); 
         }
 
 		 void ButtonCerrarSesionClick(object sender, EventArgs e)
@@ -33,6 +39,9 @@ namespace ProyectoEducativo
 		void ButtonModuloArquitecturaClick(object sender, EventArgs e)
 		{
 			 MessageBox.Show("Accediendo a: Arquitectura del computador.", "Módulo Iniciado");
+			 
+			 FormArquitectura frmArquitectura = new FormArquitectura();
+    		frmArquitectura.ShowDialog(); 
 		}
 		
 		void ButtonModuloAntropologiaClick(object sender, EventArgs e)
