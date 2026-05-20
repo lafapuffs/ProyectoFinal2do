@@ -47,6 +47,7 @@ namespace ProyectoEducativo
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormGestionUsuario));
 			this.btnAgregar = new System.Windows.Forms.Button();
 			this.dgvUsuario = new System.Windows.Forms.DataGridView();
@@ -66,18 +67,29 @@ namespace ProyectoEducativo
 			// 
 			// btnAgregar
 			// 
+			this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnAgregar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnAgregar.Location = new System.Drawing.Point(44, 264);
 			this.btnAgregar.Name = "btnAgregar";
 			this.btnAgregar.Size = new System.Drawing.Size(101, 49);
 			this.btnAgregar.TabIndex = 0;
 			this.btnAgregar.Text = "Agregar";
-			this.btnAgregar.UseVisualStyleBackColor = true;
+			this.btnAgregar.UseVisualStyleBackColor = false;
 			this.btnAgregar.Click += new System.EventHandler(this.AgregarClick);
 			// 
 			// dgvUsuario
 			// 
 			this.dgvUsuario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+			this.dgvUsuario.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.dgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.WindowFrame;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvUsuario.DefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvUsuario.Location = new System.Drawing.Point(27, 30);
 			this.dgvUsuario.Name = "dgvUsuario";
 			this.dgvUsuario.ReadOnly = true;
@@ -86,51 +98,62 @@ namespace ProyectoEducativo
 			// 
 			// btnEliminar
 			// 
+			this.btnEliminar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnEliminar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnEliminar.Location = new System.Drawing.Point(166, 264);
 			this.btnEliminar.Name = "btnEliminar";
 			this.btnEliminar.Size = new System.Drawing.Size(99, 49);
 			this.btnEliminar.TabIndex = 2;
 			this.btnEliminar.Text = "Eliminar";
-			this.btnEliminar.UseVisualStyleBackColor = true;
+			this.btnEliminar.UseVisualStyleBackColor = false;
 			this.btnEliminar.Click += new System.EventHandler(this.EliminarClick);
 			// 
 			// btnModificar
 			// 
+			this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnModificar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnModificar.Location = new System.Drawing.Point(288, 264);
 			this.btnModificar.Name = "btnModificar";
 			this.btnModificar.Size = new System.Drawing.Size(99, 49);
 			this.btnModificar.TabIndex = 3;
 			this.btnModificar.Text = "Modificar";
-			this.btnModificar.UseVisualStyleBackColor = true;
+			this.btnModificar.UseVisualStyleBackColor = false;
+			this.btnModificar.Click += new System.EventHandler(this.BtnModificarClick);
 			// 
 			// btnConsultar
 			// 
+			this.btnConsultar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnConsultar.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnConsultar.Location = new System.Drawing.Point(405, 290);
 			this.btnConsultar.Name = "btnConsultar";
 			this.btnConsultar.Size = new System.Drawing.Size(100, 23);
 			this.btnConsultar.TabIndex = 4;
 			this.btnConsultar.Text = "Consultar";
-			this.btnConsultar.UseVisualStyleBackColor = true;
+			this.btnConsultar.UseVisualStyleBackColor = false;
 			this.btnConsultar.Click += new System.EventHandler(this.ConsultarClick);
 			// 
 			// btnCerrarSesion
 			// 
+			this.btnCerrarSesion.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnCerrarSesion.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnCerrarSesion.Location = new System.Drawing.Point(288, 332);
 			this.btnCerrarSesion.Name = "btnCerrarSesion";
 			this.btnCerrarSesion.Size = new System.Drawing.Size(99, 23);
 			this.btnCerrarSesion.TabIndex = 5;
 			this.btnCerrarSesion.Text = "Cerrar Sesion";
-			this.btnCerrarSesion.UseVisualStyleBackColor = true;
+			this.btnCerrarSesion.UseVisualStyleBackColor = false;
 			this.btnCerrarSesion.Click += new System.EventHandler(this.BtnCerrarSesionClick);
 			// 
 			// btnVolver
 			// 
+			this.btnVolver.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnVolver.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.btnVolver.Location = new System.Drawing.Point(166, 332);
 			this.btnVolver.Name = "btnVolver";
 			this.btnVolver.Size = new System.Drawing.Size(99, 23);
 			this.btnVolver.TabIndex = 6;
 			this.btnVolver.Text = "Volver";
-			this.btnVolver.UseVisualStyleBackColor = true;
+			this.btnVolver.UseVisualStyleBackColor = false;
 			this.btnVolver.Click += new System.EventHandler(this.BtnVolverClick);
 			// 
 			// lblEstado
@@ -176,6 +199,8 @@ namespace ProyectoEducativo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.ClientSize = new System.Drawing.Size(559, 367);
 			this.Controls.Add(this.picBanderaEspanol);
 			this.Controls.Add(this.picBanderaIngles);
@@ -188,6 +213,7 @@ namespace ProyectoEducativo
 			this.Controls.Add(this.btnEliminar);
 			this.Controls.Add(this.dgvUsuario);
 			this.Controls.Add(this.btnAgregar);
+			this.ForeColor = System.Drawing.SystemColors.ButtonFace;
 			this.Name = "FormGestionUsuario";
 			this.Text = "FormGestionUsuario";
 			((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();

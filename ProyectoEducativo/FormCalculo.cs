@@ -157,7 +157,7 @@ namespace ProyectoEducativo
 		void AplicarIdioma()
 {
     // 1. Traducir el título de la ventana
-    this.Text = Configuracion.EsIngles ? "Sports Quiz" : "Cuestionario de Deporte";
+    this.Text = Configuracion.EsIngles ? "Calculus Quiz" : "Cuestionario de Calculo";
     
     // 2. Refrescar la pregunta actual con las nuevas columnas
     if (dtPreguntas != null && dtPreguntas.Rows.Count > 0)

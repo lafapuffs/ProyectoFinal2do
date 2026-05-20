@@ -63,7 +63,8 @@ namespace ProyectoEducativo
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(149, 212);
+			this.btnCancelar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancelar.BackgroundImage")));
+			this.btnCancelar.Location = new System.Drawing.Point(289, 269);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(78, 23);
 			this.btnCancelar.TabIndex = 1;
@@ -73,30 +74,36 @@ namespace ProyectoEducativo
 			// 
 			// lblNombre
 			// 
-			this.lblNombre.Location = new System.Drawing.Point(68, 32);
+			this.lblNombre.BackColor = System.Drawing.SystemColors.WindowFrame;
+			this.lblNombre.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblNombre.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblNombre.Location = new System.Drawing.Point(196, 80);
 			this.lblNombre.Name = "lblNombre";
-			this.lblNombre.Size = new System.Drawing.Size(100, 23);
+			this.lblNombre.Size = new System.Drawing.Size(146, 23);
 			this.lblNombre.TabIndex = 2;
 			this.lblNombre.Text = "Ingrese Nombre:";
 			// 
 			// txtNombre
 			// 
-			this.txtNombre.Location = new System.Drawing.Point(68, 49);
+			this.txtNombre.Location = new System.Drawing.Point(196, 106);
 			this.txtNombre.Name = "txtNombre";
 			this.txtNombre.Size = new System.Drawing.Size(156, 20);
 			this.txtNombre.TabIndex = 3;
 			// 
 			// lblClave
 			// 
-			this.lblClave.Location = new System.Drawing.Point(68, 84);
+			this.lblClave.BackColor = System.Drawing.SystemColors.WindowFrame;
+			this.lblClave.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblClave.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblClave.Location = new System.Drawing.Point(196, 132);
 			this.lblClave.Name = "lblClave";
-			this.lblClave.Size = new System.Drawing.Size(100, 23);
+			this.lblClave.Size = new System.Drawing.Size(146, 23);
 			this.lblClave.TabIndex = 4;
 			this.lblClave.Text = "Ingrese Clave:";
 			// 
 			// txtClave
 			// 
-			this.txtClave.Location = new System.Drawing.Point(68, 101);
+			this.txtClave.Location = new System.Drawing.Point(196, 158);
 			this.txtClave.Name = "txtClave";
 			this.txtClave.Size = new System.Drawing.Size(156, 20);
 			this.txtClave.TabIndex = 5;
@@ -107,22 +114,26 @@ namespace ProyectoEducativo
 			this.cmbRol.Items.AddRange(new object[] {
 			"Administrador - Admin",
 			"Jugador - Player"});
-			this.cmbRol.Location = new System.Drawing.Point(68, 170);
+			this.cmbRol.Location = new System.Drawing.Point(196, 227);
 			this.cmbRol.Name = "cmbRol";
 			this.cmbRol.Size = new System.Drawing.Size(156, 21);
 			this.cmbRol.TabIndex = 6;
 			// 
 			// lblRol
 			// 
-			this.lblRol.Location = new System.Drawing.Point(68, 152);
+			this.lblRol.BackColor = System.Drawing.SystemColors.WindowFrame;
+			this.lblRol.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblRol.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblRol.Location = new System.Drawing.Point(196, 190);
 			this.lblRol.Name = "lblRol";
-			this.lblRol.Size = new System.Drawing.Size(100, 15);
+			this.lblRol.Size = new System.Drawing.Size(146, 34);
 			this.lblRol.TabIndex = 7;
 			this.lblRol.Text = "Ingrese Rol:";
 			// 
 			// btnAceptar
 			// 
-			this.btnAceptar.Location = new System.Drawing.Point(68, 212);
+			this.btnAceptar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAceptar.BackgroundImage")));
+			this.btnAceptar.Location = new System.Drawing.Point(196, 269);
 			this.btnAceptar.Name = "btnAceptar";
 			this.btnAceptar.Size = new System.Drawing.Size(75, 23);
 			this.btnAceptar.TabIndex = 8;
@@ -134,18 +145,19 @@ namespace ProyectoEducativo
 			// 
 			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
-			this.picBanderaIngles.Location = new System.Drawing.Point(259, 12);
+			this.picBanderaIngles.Location = new System.Drawing.Point(492, 12);
 			this.picBanderaIngles.Name = "picBanderaIngles";
 			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
 			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
 			this.picBanderaIngles.TabIndex = 9;
 			this.picBanderaIngles.TabStop = false;
+			this.picBanderaIngles.Click += new System.EventHandler(this.PicBanderaInglesClick);
 			// 
 			// picBanderaEspanol
 			// 
 			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
-			this.picBanderaEspanol.Location = new System.Drawing.Point(289, 12);
+			this.picBanderaEspanol.Location = new System.Drawing.Point(534, 12);
 			this.picBanderaEspanol.Name = "picBanderaEspanol";
 			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
 			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -157,7 +169,8 @@ namespace ProyectoEducativo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(343, 261);
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.ClientSize = new System.Drawing.Size(571, 362);
 			this.Controls.Add(this.picBanderaEspanol);
 			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.btnAceptar);

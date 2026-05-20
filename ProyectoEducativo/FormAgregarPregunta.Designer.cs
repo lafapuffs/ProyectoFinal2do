@@ -67,6 +67,7 @@ namespace ProyectoEducativo
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAgregarPregunta));
 			this.lblPregunta = new System.Windows.Forms.Label();
 			this.lblA = new System.Windows.Forms.Label();
 			this.lblB = new System.Windows.Forms.Label();
@@ -102,7 +103,8 @@ namespace ProyectoEducativo
 			// 
 			// lblPregunta
 			// 
-			this.lblPregunta.Location = new System.Drawing.Point(254, 49);
+			this.lblPregunta.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblPregunta.Location = new System.Drawing.Point(439, 47);
 			this.lblPregunta.Name = "lblPregunta";
 			this.lblPregunta.Size = new System.Drawing.Size(156, 23);
 			this.lblPregunta.TabIndex = 0;
@@ -110,7 +112,8 @@ namespace ProyectoEducativo
 			// 
 			// lblA
 			// 
-			this.lblA.Location = new System.Drawing.Point(57, 38);
+			this.lblA.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblA.Location = new System.Drawing.Point(183, 31);
 			this.lblA.Name = "lblA";
 			this.lblA.Size = new System.Drawing.Size(100, 23);
 			this.lblA.TabIndex = 1;
@@ -118,7 +121,8 @@ namespace ProyectoEducativo
 			// 
 			// lblB
 			// 
-			this.lblB.Location = new System.Drawing.Point(57, 99);
+			this.lblB.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblB.Location = new System.Drawing.Point(183, 92);
 			this.lblB.Name = "lblB";
 			this.lblB.Size = new System.Drawing.Size(100, 23);
 			this.lblB.TabIndex = 2;
@@ -126,7 +130,8 @@ namespace ProyectoEducativo
 			// 
 			// lblC
 			// 
-			this.lblC.Location = new System.Drawing.Point(57, 174);
+			this.lblC.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblC.Location = new System.Drawing.Point(183, 167);
 			this.lblC.Name = "lblC";
 			this.lblC.Size = new System.Drawing.Size(100, 23);
 			this.lblC.TabIndex = 3;
@@ -134,7 +139,8 @@ namespace ProyectoEducativo
 			// 
 			// lblD
 			// 
-			this.lblD.Location = new System.Drawing.Point(57, 250);
+			this.lblD.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblD.Location = new System.Drawing.Point(183, 243);
 			this.lblD.Name = "lblD";
 			this.lblD.Size = new System.Drawing.Size(100, 23);
 			this.lblD.TabIndex = 4;
@@ -148,59 +154,62 @@ namespace ProyectoEducativo
 			"B",
 			"C",
 			"D"});
-			this.cmbCorrecta.Location = new System.Drawing.Point(254, 165);
+			this.cmbCorrecta.Location = new System.Drawing.Point(439, 163);
 			this.cmbCorrecta.Name = "cmbCorrecta";
 			this.cmbCorrecta.Size = new System.Drawing.Size(121, 21);
 			this.cmbCorrecta.TabIndex = 5;
 			// 
 			// btnGuardar
 			// 
-			this.btnGuardar.Location = new System.Drawing.Point(254, 283);
+			this.btnGuardar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnGuardar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnGuardar.Location = new System.Drawing.Point(439, 281);
 			this.btnGuardar.Name = "btnGuardar";
 			this.btnGuardar.Size = new System.Drawing.Size(75, 23);
 			this.btnGuardar.TabIndex = 6;
 			this.btnGuardar.Text = "Guardar";
-			this.btnGuardar.UseVisualStyleBackColor = true;
+			this.btnGuardar.UseVisualStyleBackColor = false;
 			this.btnGuardar.Click += new System.EventHandler(this.BtnGuardarClick);
 			// 
 			// txtPregunta
 			// 
-			this.txtPregunta.Location = new System.Drawing.Point(254, 70);
+			this.txtPregunta.Location = new System.Drawing.Point(439, 68);
 			this.txtPregunta.Name = "txtPregunta";
 			this.txtPregunta.Size = new System.Drawing.Size(168, 20);
 			this.txtPregunta.TabIndex = 7;
 			// 
 			// txtA
 			// 
-			this.txtA.Location = new System.Drawing.Point(57, 52);
+			this.txtA.Location = new System.Drawing.Point(183, 45);
 			this.txtA.Name = "txtA";
 			this.txtA.Size = new System.Drawing.Size(100, 20);
 			this.txtA.TabIndex = 8;
 			// 
 			// txtB
 			// 
-			this.txtB.Location = new System.Drawing.Point(57, 116);
+			this.txtB.Location = new System.Drawing.Point(183, 109);
 			this.txtB.Name = "txtB";
 			this.txtB.Size = new System.Drawing.Size(100, 20);
 			this.txtB.TabIndex = 9;
 			// 
 			// txtC
 			// 
-			this.txtC.Location = new System.Drawing.Point(57, 200);
+			this.txtC.Location = new System.Drawing.Point(183, 193);
 			this.txtC.Name = "txtC";
 			this.txtC.Size = new System.Drawing.Size(100, 20);
 			this.txtC.TabIndex = 10;
 			// 
 			// txtD
 			// 
-			this.txtD.Location = new System.Drawing.Point(57, 265);
+			this.txtD.Location = new System.Drawing.Point(183, 258);
 			this.txtD.Name = "txtD";
 			this.txtD.Size = new System.Drawing.Size(100, 20);
 			this.txtD.TabIndex = 11;
 			// 
 			// lblRespuesta
 			// 
-			this.lblRespuesta.Location = new System.Drawing.Point(254, 145);
+			this.lblRespuesta.ForeColor = System.Drawing.SystemColors.Control;
+			this.lblRespuesta.Location = new System.Drawing.Point(439, 143);
 			this.lblRespuesta.Name = "lblRespuesta";
 			this.lblRespuesta.Size = new System.Drawing.Size(180, 20);
 			this.lblRespuesta.TabIndex = 12;
@@ -208,45 +217,48 @@ namespace ProyectoEducativo
 			// 
 			// btnCancelar
 			// 
-			this.btnCancelar.Location = new System.Drawing.Point(341, 284);
+			this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnCancelar.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnCancelar.Location = new System.Drawing.Point(526, 282);
 			this.btnCancelar.Name = "btnCancelar";
 			this.btnCancelar.Size = new System.Drawing.Size(81, 22);
 			this.btnCancelar.TabIndex = 13;
 			this.btnCancelar.Text = "Cancelar";
-			this.btnCancelar.UseVisualStyleBackColor = true;
+			this.btnCancelar.UseVisualStyleBackColor = false;
 			this.btnCancelar.Click += new System.EventHandler(this.BtnCancelarClick);
 			// 
 			// txtAEn
 			// 
-			this.txtAEn.Location = new System.Drawing.Point(57, 73);
+			this.txtAEn.Location = new System.Drawing.Point(183, 66);
 			this.txtAEn.Name = "txtAEn";
 			this.txtAEn.Size = new System.Drawing.Size(100, 20);
 			this.txtAEn.TabIndex = 14;
 			// 
 			// txtDEn
 			// 
-			this.txtDEn.Location = new System.Drawing.Point(57, 291);
+			this.txtDEn.Location = new System.Drawing.Point(183, 284);
 			this.txtDEn.Name = "txtDEn";
 			this.txtDEn.Size = new System.Drawing.Size(100, 20);
 			this.txtDEn.TabIndex = 15;
 			// 
 			// txtCEn
 			// 
-			this.txtCEn.Location = new System.Drawing.Point(57, 226);
+			this.txtCEn.Location = new System.Drawing.Point(183, 219);
 			this.txtCEn.Name = "txtCEn";
 			this.txtCEn.Size = new System.Drawing.Size(100, 20);
 			this.txtCEn.TabIndex = 16;
 			// 
 			// txtBEn
 			// 
-			this.txtBEn.Location = new System.Drawing.Point(57, 142);
+			this.txtBEn.Location = new System.Drawing.Point(183, 135);
 			this.txtBEn.Name = "txtBEn";
 			this.txtBEn.Size = new System.Drawing.Size(100, 20);
 			this.txtBEn.TabIndex = 17;
 			// 
 			// label1
 			// 
-			this.label1.Location = new System.Drawing.Point(0, 116);
+			this.label1.ForeColor = System.Drawing.SystemColors.Control;
+			this.label1.Location = new System.Drawing.Point(126, 109);
 			this.label1.Name = "label1";
 			this.label1.Size = new System.Drawing.Size(52, 23);
 			this.label1.TabIndex = 18;
@@ -254,7 +266,8 @@ namespace ProyectoEducativo
 			// 
 			// label2
 			// 
-			this.label2.Location = new System.Drawing.Point(0, 200);
+			this.label2.ForeColor = System.Drawing.SystemColors.Control;
+			this.label2.Location = new System.Drawing.Point(126, 193);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(52, 23);
 			this.label2.TabIndex = 19;
@@ -262,7 +275,8 @@ namespace ProyectoEducativo
 			// 
 			// label3
 			// 
-			this.label3.Location = new System.Drawing.Point(0, 265);
+			this.label3.ForeColor = System.Drawing.SystemColors.Control;
+			this.label3.Location = new System.Drawing.Point(126, 258);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(52, 23);
 			this.label3.TabIndex = 20;
@@ -270,7 +284,8 @@ namespace ProyectoEducativo
 			// 
 			// label4
 			// 
-			this.label4.Location = new System.Drawing.Point(0, 49);
+			this.label4.ForeColor = System.Drawing.SystemColors.Control;
+			this.label4.Location = new System.Drawing.Point(126, 42);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(52, 23);
 			this.label4.TabIndex = 21;
@@ -278,7 +293,8 @@ namespace ProyectoEducativo
 			// 
 			// label5
 			// 
-			this.label5.Location = new System.Drawing.Point(0, 142);
+			this.label5.ForeColor = System.Drawing.SystemColors.Control;
+			this.label5.Location = new System.Drawing.Point(126, 135);
 			this.label5.Name = "label5";
 			this.label5.Size = new System.Drawing.Size(52, 23);
 			this.label5.TabIndex = 22;
@@ -286,7 +302,8 @@ namespace ProyectoEducativo
 			// 
 			// label6
 			// 
-			this.label6.Location = new System.Drawing.Point(0, 73);
+			this.label6.ForeColor = System.Drawing.SystemColors.Control;
+			this.label6.Location = new System.Drawing.Point(126, 66);
 			this.label6.Name = "label6";
 			this.label6.Size = new System.Drawing.Size(52, 23);
 			this.label6.TabIndex = 23;
@@ -294,7 +311,8 @@ namespace ProyectoEducativo
 			// 
 			// label7
 			// 
-			this.label7.Location = new System.Drawing.Point(0, 226);
+			this.label7.ForeColor = System.Drawing.SystemColors.Control;
+			this.label7.Location = new System.Drawing.Point(126, 219);
 			this.label7.Name = "label7";
 			this.label7.Size = new System.Drawing.Size(52, 23);
 			this.label7.TabIndex = 24;
@@ -302,7 +320,8 @@ namespace ProyectoEducativo
 			// 
 			// label8
 			// 
-			this.label8.Location = new System.Drawing.Point(0, 288);
+			this.label8.ForeColor = System.Drawing.SystemColors.Control;
+			this.label8.Location = new System.Drawing.Point(126, 281);
 			this.label8.Name = "label8";
 			this.label8.Size = new System.Drawing.Size(52, 23);
 			this.label8.TabIndex = 25;
@@ -310,21 +329,22 @@ namespace ProyectoEducativo
 			// 
 			// txtPreguntaEn
 			// 
-			this.txtPreguntaEn.Location = new System.Drawing.Point(254, 113);
+			this.txtPreguntaEn.Location = new System.Drawing.Point(439, 111);
 			this.txtPreguntaEn.Name = "txtPreguntaEn";
 			this.txtPreguntaEn.Size = new System.Drawing.Size(168, 20);
 			this.txtPreguntaEn.TabIndex = 26;
 			// 
 			// txtImagenRuta
 			// 
-			this.txtImagenRuta.Location = new System.Drawing.Point(254, 215);
+			this.txtImagenRuta.Location = new System.Drawing.Point(439, 213);
 			this.txtImagenRuta.Name = "txtImagenRuta";
 			this.txtImagenRuta.Size = new System.Drawing.Size(263, 20);
 			this.txtImagenRuta.TabIndex = 27;
 			// 
 			// label9
 			// 
-			this.label9.Location = new System.Drawing.Point(254, 189);
+			this.label9.ForeColor = System.Drawing.SystemColors.Control;
+			this.label9.Location = new System.Drawing.Point(439, 187);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(156, 23);
 			this.label9.TabIndex = 28;
@@ -332,7 +352,8 @@ namespace ProyectoEducativo
 			// 
 			// label10
 			// 
-			this.label10.Location = new System.Drawing.Point(254, 93);
+			this.label10.ForeColor = System.Drawing.SystemColors.Control;
+			this.label10.Location = new System.Drawing.Point(439, 91);
 			this.label10.Name = "label10";
 			this.label10.Size = new System.Drawing.Size(156, 17);
 			this.label10.TabIndex = 29;
@@ -340,19 +361,23 @@ namespace ProyectoEducativo
 			// 
 			// btnSeleccionarImagen
 			// 
-			this.btnSeleccionarImagen.Location = new System.Drawing.Point(254, 245);
+			this.btnSeleccionarImagen.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnSeleccionarImagen.ForeColor = System.Drawing.SystemColors.ControlDark;
+			this.btnSeleccionarImagen.Location = new System.Drawing.Point(439, 243);
 			this.btnSeleccionarImagen.Name = "btnSeleccionarImagen";
 			this.btnSeleccionarImagen.Size = new System.Drawing.Size(75, 23);
 			this.btnSeleccionarImagen.TabIndex = 30;
 			this.btnSeleccionarImagen.Text = "Buscar";
-			this.btnSeleccionarImagen.UseVisualStyleBackColor = true;
+			this.btnSeleccionarImagen.UseVisualStyleBackColor = false;
 			this.btnSeleccionarImagen.Click += new System.EventHandler(this.BtnSeleccionarImagenClick);
 			// 
 			// FormAgregarPregunta
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(529, 352);
+			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.ClientSize = new System.Drawing.Size(726, 329);
 			this.Controls.Add(this.btnSeleccionarImagen);
 			this.Controls.Add(this.label10);
 			this.Controls.Add(this.label9);
@@ -384,6 +409,7 @@ namespace ProyectoEducativo
 			this.Controls.Add(this.lblB);
 			this.Controls.Add(this.lblA);
 			this.Controls.Add(this.lblPregunta);
+			this.ForeColor = System.Drawing.SystemColors.ControlDark;
 			this.Name = "FormAgregarPregunta";
 			this.Text = "FormAgregarPregunta";
 			this.ResumeLayout(false);

@@ -84,47 +84,57 @@ namespace ProyectoEducativo
 			// 
 			// btnD
 			// 
-			this.btnD.Location = new System.Drawing.Point(311, 294);
+			this.btnD.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnD.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnD.Location = new System.Drawing.Point(309, 298);
 			this.btnD.Name = "btnD";
-			this.btnD.Size = new System.Drawing.Size(138, 53);
+			this.btnD.Size = new System.Drawing.Size(168, 80);
 			this.btnD.TabIndex = 23;
 			this.btnD.Text = "Opcion D";
-			this.btnD.UseVisualStyleBackColor = true;
+			this.btnD.UseVisualStyleBackColor = false;
 			this.btnD.Click += new System.EventHandler(this.BtnDClick);
 			// 
 			// btnC
 			// 
-			this.btnC.Location = new System.Drawing.Point(39, 294);
+			this.btnC.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnC.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnC.Location = new System.Drawing.Point(37, 298);
 			this.btnC.Name = "btnC";
-			this.btnC.Size = new System.Drawing.Size(138, 53);
+			this.btnC.Size = new System.Drawing.Size(168, 80);
 			this.btnC.TabIndex = 22;
 			this.btnC.Text = "Opcion C";
-			this.btnC.UseVisualStyleBackColor = true;
+			this.btnC.UseVisualStyleBackColor = false;
 			this.btnC.Click += new System.EventHandler(this.BtnCClick);
 			// 
 			// btnB
 			// 
-			this.btnB.Location = new System.Drawing.Point(311, 199);
+			this.btnB.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnB.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnB.Location = new System.Drawing.Point(309, 203);
 			this.btnB.Name = "btnB";
-			this.btnB.Size = new System.Drawing.Size(138, 53);
+			this.btnB.Size = new System.Drawing.Size(168, 80);
 			this.btnB.TabIndex = 21;
 			this.btnB.Text = "Opcion B";
-			this.btnB.UseVisualStyleBackColor = true;
+			this.btnB.UseVisualStyleBackColor = false;
 			this.btnB.Click += new System.EventHandler(this.BtnBClick);
 			// 
 			// btnA
 			// 
-			this.btnA.Location = new System.Drawing.Point(39, 199);
+			this.btnA.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+			this.btnA.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.btnA.Location = new System.Drawing.Point(37, 203);
 			this.btnA.Name = "btnA";
-			this.btnA.Size = new System.Drawing.Size(138, 53);
+			this.btnA.Size = new System.Drawing.Size(168, 80);
 			this.btnA.TabIndex = 20;
 			this.btnA.Text = "Opcion A";
-			this.btnA.UseVisualStyleBackColor = true;
+			this.btnA.UseVisualStyleBackColor = false;
 			this.btnA.Click += new System.EventHandler(this.BtnAClick);
 			// 
 			// lblPregunta
 			// 
 			this.lblPregunta.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPregunta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+			this.lblPregunta.Image = ((System.Drawing.Image)(resources.GetObject("lblPregunta.Image")));
 			this.lblPregunta.Location = new System.Drawing.Point(12, 9);
 			this.lblPregunta.Name = "lblPregunta";
 			this.lblPregunta.Size = new System.Drawing.Size(447, 141);
@@ -144,7 +154,8 @@ namespace ProyectoEducativo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(831, 416);
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.ClientSize = new System.Drawing.Size(831, 408);
 			this.Controls.Add(this.picPreguntas);
 			this.Controls.Add(this.picBanderaEspanol);
 			this.Controls.Add(this.picBanderaIngles);

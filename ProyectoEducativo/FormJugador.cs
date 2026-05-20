@@ -16,7 +16,7 @@ namespace ProyectoEducativo
         
         void ButtonModuloCalculoClick(object sender, EventArgs e)
         {
-             MessageBox.Show("Accediendo a: Deporte.", "Módulo Iniciado");
+             MessageBox.Show("Accediendo a: Calculo.", "Módulo Iniciado");
              
              FormCalculo frmCalculo = new FormCalculo();
     		frmCalculo.ShowDialog(); 

@@ -50,6 +50,11 @@ namespace ProyectoEducativo
             MessageBox.Show("Error al actualizar: " + ex.Message);
         }
     }
+		void BtnCancelarClick(object sender, EventArgs e)
+		{
+			this.Close();
+		}
+    
 		
 }
 }

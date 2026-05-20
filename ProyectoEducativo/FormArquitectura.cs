@@ -171,7 +171,7 @@ string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b
 		void AplicarIdioma()
 {
     // 1. Traducir el título de la ventana
-    this.Text = Configuracion.EsIngles ? "Sports Quiz" : "Cuestionario de Deporte";
+    this.Text = Configuracion.EsIngles ? "Architecture Quiz" : "Cuestionario de Arquitectura";
     
     // 2. Refrescar la pregunta actual con las nuevas columnas
     if (dtPreguntas != null && dtPreguntas.Rows.Count > 0)

@@ -115,10 +115,10 @@ namespace ProyectoEducativo
    		 if (dgvUsuario.SelectedRows.Count > 0)
     {
         // Solo si hay una fila, extraemos el ID
-       	 int id = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["id"].Value);
-        string nombre = dgvUsuario.SelectedRows[0].Cells["nombre"].Value.ToString();
-		string clave = dgvUsuario.SelectedRows[0].Cells["clave"].Value.ToString();
-		int rol = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells["id_rol"].Value);
+        int id = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells[0].Value);
+        string nombre = dgvUsuario.SelectedRows[0].Cells[1].Value.ToString();
+        string clave = dgvUsuario.SelectedRows[0].Cells[2].Value.ToString();
+        int rol = Convert.ToInt32(dgvUsuario.SelectedRows[0].Cells[3].Value);
        	 
        	 
        	 FormModificarUsuario frm = new FormModificarUsuario(id, nombre, clave, rol);

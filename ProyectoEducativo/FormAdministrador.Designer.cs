@@ -147,7 +147,7 @@ namespace ProyectoEducativo
 			this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
 			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-			this.ClientSize = new System.Drawing.Size(508, 386);
+			this.ClientSize = new System.Drawing.Size(508, 367);
 			this.Controls.Add(this.picBanderaEspanol);
 			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.btnCerrarSesion);

@@ -57,59 +57,70 @@ namespace ProyectoEducativo
 			// 
 			// lblPregunta
 			// 
+			this.lblPregunta.BackColor = System.Drawing.Color.Black;
 			this.lblPregunta.Font = new System.Drawing.Font("Papyrus", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPregunta.Location = new System.Drawing.Point(96, 32);
+			this.lblPregunta.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.lblPregunta.Image = ((System.Drawing.Image)(resources.GetObject("lblPregunta.Image")));
+			this.lblPregunta.Location = new System.Drawing.Point(51, 9);
 			this.lblPregunta.Name = "lblPregunta";
-			this.lblPregunta.Size = new System.Drawing.Size(375, 134);
+			this.lblPregunta.Size = new System.Drawing.Size(512, 210);
 			this.lblPregunta.TabIndex = 0;
 			this.lblPregunta.Text = "Pregunta";
 			this.lblPregunta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 			// 
 			// btnA
 			// 
-			this.btnA.Location = new System.Drawing.Point(96, 198);
+			this.btnA.BackColor = System.Drawing.Color.Black;
+			this.btnA.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnA.Location = new System.Drawing.Point(84, 222);
 			this.btnA.Name = "btnA";
-			this.btnA.Size = new System.Drawing.Size(138, 53);
+			this.btnA.Size = new System.Drawing.Size(174, 79);
 			this.btnA.TabIndex = 1;
 			this.btnA.Text = "Opcion A";
-			this.btnA.UseVisualStyleBackColor = true;
+			this.btnA.UseVisualStyleBackColor = false;
 			this.btnA.Click += new System.EventHandler(this.BtnAClick);
 			// 
 			// btnB
 			// 
-			this.btnB.Location = new System.Drawing.Point(333, 198);
+			this.btnB.BackColor = System.Drawing.Color.Black;
+			this.btnB.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnB.Location = new System.Drawing.Point(321, 222);
 			this.btnB.Name = "btnB";
-			this.btnB.Size = new System.Drawing.Size(138, 53);
+			this.btnB.Size = new System.Drawing.Size(174, 79);
 			this.btnB.TabIndex = 2;
 			this.btnB.Text = "Opcion B";
-			this.btnB.UseVisualStyleBackColor = true;
+			this.btnB.UseVisualStyleBackColor = false;
 			this.btnB.Click += new System.EventHandler(this.BtnBClick);
 			// 
 			// btnC
 			// 
-			this.btnC.Location = new System.Drawing.Point(96, 284);
+			this.btnC.BackColor = System.Drawing.Color.Black;
+			this.btnC.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnC.Location = new System.Drawing.Point(84, 308);
 			this.btnC.Name = "btnC";
-			this.btnC.Size = new System.Drawing.Size(138, 53);
+			this.btnC.Size = new System.Drawing.Size(174, 79);
 			this.btnC.TabIndex = 3;
 			this.btnC.Text = "Opcion C";
-			this.btnC.UseVisualStyleBackColor = true;
+			this.btnC.UseVisualStyleBackColor = false;
 			this.btnC.Click += new System.EventHandler(this.BtnCClick);
 			// 
 			// btnD
 			// 
-			this.btnD.Location = new System.Drawing.Point(333, 284);
+			this.btnD.BackColor = System.Drawing.Color.Black;
+			this.btnD.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.btnD.Location = new System.Drawing.Point(321, 308);
 			this.btnD.Name = "btnD";
-			this.btnD.Size = new System.Drawing.Size(138, 53);
+			this.btnD.Size = new System.Drawing.Size(174, 79);
 			this.btnD.TabIndex = 4;
 			this.btnD.Text = "Opcion D";
-			this.btnD.UseVisualStyleBackColor = true;
+			this.btnD.UseVisualStyleBackColor = false;
 			this.btnD.Click += new System.EventHandler(this.BtnDClick);
 			// 
 			// picBanderaIngles
 			// 
 			this.picBanderaIngles.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.picBanderaIngles.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaIngles.Image")));
-			this.picBanderaIngles.Location = new System.Drawing.Point(510, 364);
+			this.picBanderaIngles.Location = new System.Drawing.Point(580, 376);
 			this.picBanderaIngles.Name = "picBanderaIngles";
 			this.picBanderaIngles.Size = new System.Drawing.Size(24, 21);
 			this.picBanderaIngles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -121,7 +132,7 @@ namespace ProyectoEducativo
 			// 
 			this.picBanderaEspanol.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.picBanderaEspanol.Image = ((System.Drawing.Image)(resources.GetObject("picBanderaEspanol.Image")));
-			this.picBanderaEspanol.Location = new System.Drawing.Point(540, 364);
+			this.picBanderaEspanol.Location = new System.Drawing.Point(610, 376);
 			this.picBanderaEspanol.Name = "picBanderaEspanol";
 			this.picBanderaEspanol.Size = new System.Drawing.Size(25, 21);
 			this.picBanderaEspanol.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -133,7 +144,8 @@ namespace ProyectoEducativo
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(568, 397);
+			this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+			this.ClientSize = new System.Drawing.Size(644, 409);
 			this.Controls.Add(this.picBanderaEspanol);
 			this.Controls.Add(this.picBanderaIngles);
 			this.Controls.Add(this.btnD);
