@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 20, 2026 at 06:20 AM
+-- Generation Time: May 26, 2026 at 04:28 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -103,11 +103,8 @@ CREATE TABLE `preguntas_arquitectura` (
 --
 
 INSERT INTO `preguntas_arquitectura` (`id`, `pregunta`, `opcion_a`, `opcion_b`, `opcion_c`, `opcion_d`, `respuesta_correcta`, `pregunta_en`, `opcion_a_en`, `opcion_b_en`, `opcion_c_en`, `opcion_d_en`, `imagen_ruta`) VALUES
-(1, 'Que es esto?', 'Memoria RAM', 'Disco Duro', 'Tarjeta Grafica', 'Procesador', 'A', 'What is this?', 'RAM Memory', 'Hard Drive', 'Graphic Card', 'Processor', 'C:\\Users\\rafae\\OneDrive\\Documentos\\SharpDevelop Projects\\ProyectoEducativo\\ProyectoEducativo\\bin\\Debug\\ImagenesModuloArquitectura\\Pregunta1.jpg'),
-(2, 'Observa este componente. ¿Por qué se le conoce frecuentemente como el \"cerebro\" de la computadora?', 'Porque interpreta y ejecuta todas las instrucciones de los programas.', 'Porque es el encargado de dar energía a todos los ventiladores.', 'Porque es donde se guardan permanentemente todas las fotos y videos.', 'Porque conecta la computadora con el monitor de forma inalámbrica.', 'A', 'Look at this component. Why is it frequently known as the \"brain\" of the computer?', 'Because it interprets and executes all program instructions.', 'Because it is responsible for powering all the cooling fans.', 'Because it is where all photos and videos are permanently saved.', 'Because it connects the computer to the monitor wirelessly.', NULL),
-(3, 'Al ver este módulo de memoria, ¿cuál es su característica principal en cuanto al almacenamiento?', 'Es una memoria de acceso rápido que se borra al apagar el equipo.', 'Guarda la información para siempre, incluso si apagas la computadora.', 'Es mucho más lenta que un disco duro pero tiene más capacidad.', 'Solo sirve para que la computadora encienda más rápido.', 'A', 'Looking at this memory module, what is its main characteristic regarding storage?', 'It is a high-speed access memory that is cleared when the computer is turned off.', 'It saves information forever, even if you turn off the computer.', 'It is much slower than a hard drive but has more capacity.', 'It only serves to make the computer turn on faster.', NULL),
-(4, 'En el esquema de la tarjeta madre se ven varias líneas que conectan los componentes. ¿Cuál es la función de estos \"Buses\"?', 'Transportar la información digital entre los distintos componentes (CPU, RAM, etc).', 'Transportar la electricidad desde la fuente de poder.', 'Enfriar el procesador mediante aire a presión.', 'Sostener físicamente las piezas para que no se caigan.', 'A', 'In the motherboard diagram, you can see several lines connecting the components. What is the function of these \"Buses\"?', 'To transport digital information between different components (CPU, RAM, etc.).', 'To transport electricity from the power supply unit.', 'To cool down the processor using pressurized air.', 'To physically hold the parts so they do not fall out.', NULL),
-(5, 'Observa el teclado y el monitor en el diagrama. ¿Cómo interactúan con la CPU según la arquitectura básica?', 'El teclado envía datos (entrada) y el monitor muestra resultados (salida).', 'Ambos son encargados de procesar la lógica matemática.', 'El monitor le da instrucciones al teclado para que escriba solo.', 'No tienen ninguna relación con el funcionamiento del procesador.', 'A', 'Look at the keyboard and the monitor in the diagram. How do they interact with the CPU according to basic architecture?', 'The keyboard sends data (input) and the monitor displays results (output).', 'Both are responsible for processing mathematical logic.', 'The monitor gives instructions to the keyboard so it types on its own.', 'They have no relationship with the operation of the processor.', NULL);
+(1, 'Que es esto?', 'Memoria RAM', 'Disco Duro', 'Tarjeta Grafica', 'Procesador', 'A', 'What is this?', 'RAM Memory', 'Hard Drive', 'Graphic Card', 'Processor', 'C:\\Users\\rafae\\Downloads\\images proyect\\prueba\\Pregunta1.jpg'),
+(2, 'Observa este componente. ¿Por qué se le conoce frecuentemente como el \"cerebro\" de la computadora?', 'Porque interpreta y ejecuta todas las instrucciones de los programas.', 'Porque es el encargado de dar energía a todos los ventiladores.', 'Porque es donde se guardan permanentemente todas las fotos y videos.', 'Porque conecta la computadora con el monitor de forma inalámbrica.', 'A', 'Look at this component. Why is it frequently known as the \"brain\" of the computer?', 'Because it interprets and executes all program instructions.', 'Because it is responsible for powering all the cooling fans.', 'Because it is where all photos and videos are permanently saved.', 'Because it connects the computer to the monitor wirelessly.', 'C:\\Users\\rafae\\Downloads\\images proyect\\prueba\\Pregunta2.jpg');
 
 -- --------------------------------------------------------
 
@@ -207,7 +204,7 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`id`, `nombre`, `clave`, `rol`, `puntaje`) VALUES
 (1, 'rafa', '1234', 1, 0),
-(5, 'maria', '1212', 2, 40),
+(5, 'maria', '1212', 2, 30),
 (7, 'dai', '1234', 1, 0),
 (8, 'cesar', '2426', 2, 45),
 (9, 'Ana', '2301', 2, 25);
