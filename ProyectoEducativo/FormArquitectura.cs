@@ -19,7 +19,7 @@ namespace ProyectoEducativo
             AplicarIdioma();
         }
 
-        // 1. Descargamos las preguntas de MySQL
+        // Descargamos las preguntas de MySQL
         private void CargarPreguntasDesdeBD()
         {
             dtPreguntas = new DataTable();
@@ -27,8 +27,8 @@ namespace ProyectoEducativo
             {
                 using (MySqlConnection conexion = new MySqlConnection(cadenaConexion))
                 {
-                    // Solo agrega ", imagen_ruta" a tu string de consulta
-string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b, opcion_b_en, " + 
+          
+				  string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b, opcion_b_en, " + 
                   "opcion_c, opcion_c_en, opcion_d, opcion_d_en, respuesta_correcta, imagen_ruta FROM preguntas_arquitectura";
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(consulta, conexion);
                     adaptador.Fill(dtPreguntas);
@@ -50,7 +50,7 @@ string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b
             }
         }
 
-        // 2. Colocamos el texto en los botones y el label
+        // Colocamos el texto en los botones y el label
        private void MostrarPregunta()
 {
     if (indiceActual < dtPreguntas.Rows.Count)
@@ -68,17 +68,57 @@ string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b
         btnD.Text = "D: " + fila["opcion_d" + sufijo].ToString();
         
         // Incluyendo la PictureBox para mostrar la imagen de la pregunta
-        string rutaImagen = fila["imagen_ruta"].ToString();
+        // Añadimos .Trim() por si hay espacios accidentales al final de la ruta
+       
+		//  Obtener la ruta limpia desde la base de datos
+		string rutaImagen = fila["imagen_ruta"].ToString().Trim();
 
-        if (!string.IsNullOrEmpty(rutaImagen) && System.IO.File.Exists(rutaImagen))
+		// Normalizamos las barras para evitar conflictos de caracteres de escape
+		rutaImagen = rutaImagen.Replace("\\", "/");
+
+		if (!string.IsNullOrEmpty(rutaImagen) && System.IO.File.Exists(rutaImagen))
+	{
+    try
+    {
+        // Liberamos por completo la imagen anterior de la memoria
+        if (picPreguntas.Image != null)
         {
-            picPreguntas.ImageLocation = rutaImagen;
-            picPreguntas.SizeMode = PictureBoxSizeMode.StretchImage; // Asegura que quepa en el cuadro
+            picPreguntas.Image.Dispose();
+            picPreguntas.Image = null;
         }
-        else
+
+        //Cargamos los datos binarios directamente del disco (para leer los bytes xd)
+        byte[] bytesImagen = System.IO.File.ReadAllBytes(rutaImagen);
+        
+        // Convertimos los bytes crudos en un flujo de memoria y luego en objeto Image
+        using (System.IO.MemoryStream ms = new System.IO.MemoryStream(bytesImagen))
         {
-            picPreguntas.Image = null; // Limpia la imagen si no existe la ruta o el archivo
+            picPreguntas.Image = Image.FromStream(ms);
         }
+
+        picPreguntas.SizeMode = PictureBoxSizeMode.StretchImage;
+        picPreguntas.Visible = true; 
+    }
+    catch (Exception ex)
+    {
+        // Si entra aquí, nos dirá exactamente el motivo del fallo del sistema
+        MessageBox.Show("Error del sistema al procesar los bytes de la imagen:\n" + ex.Message);
+        picPreguntas.Image = null;
+    }
+}
+		else
+	{
+    // Si el archivo no se encuentra en esa ruta exacta, limpiamos el PictureBox
+    picPreguntas.ImageLocation = null;
+    if (picPreguntas.Image != null)
+    {
+        picPreguntas.Image.Dispose();
+        picPreguntas.Image = null;
+    }
+    
+    // Mensaje de diagnóstico para saber qué ruta está buscando realmente en la BD
+    MessageBox.Show("C# no encuentra el archivo en el disco.\nRuta buscada:\n" + rutaImagen);
+}
     }
     else
     {
@@ -88,7 +128,7 @@ string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b
     }
 }
 
-        // 3. Lógica para evaluar si el jugador acertó
+        // Lógica para evaluar si el jugador acertó
        private void VerificarRespuesta(string opcionElegida)
 {
     DataRow fila = dtPreguntas.Rows[indiceActual];
@@ -131,7 +171,7 @@ string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b
     }
 }
 
-        // 4. Eventos de los botones (Recuerda hacerles doble clic en el diseñador para conectarlos)
+        // Eventos de los botones 
         void BtnAClick(object sender, EventArgs e)
         {
             VerificarRespuesta("A");
@@ -170,10 +210,10 @@ string consulta = "SELECT pregunta, pregunta_en, opcion_a, opcion_a_en, opcion_b
 		
 		void AplicarIdioma()
 {
-    // 1. Traducir el título de la ventana
+    //Traducir el título de la ventana
     this.Text = Configuracion.EsIngles ? "Architecture Quiz" : "Cuestionario de Arquitectura";
     
-    // 2. Refrescar la pregunta actual con las nuevas columnas
+    // Refrescar la pregunta actual con las nuevas columnas
     if (dtPreguntas != null && dtPreguntas.Rows.Count > 0)
     {
         MostrarPregunta();

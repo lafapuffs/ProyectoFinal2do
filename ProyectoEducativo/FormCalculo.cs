@@ -19,7 +19,7 @@ namespace ProyectoEducativo
             AplicarIdioma();
         }
 
-        // 1. Descargamos las preguntas de MySQL
+        // Descargamos las preguntas de MySQL
         private void CargarPreguntasDesdeBD()
         {
             dtPreguntas = new DataTable();
@@ -49,7 +49,7 @@ namespace ProyectoEducativo
             }
         }
 
-        // 2. Colocamos el texto en los botones y el label
+        //Colocamos el texto en los botones y el label
        private void MostrarPregunta()
 {
     if (indiceActual < dtPreguntas.Rows.Count)
@@ -74,7 +74,7 @@ namespace ProyectoEducativo
     }
 }
 
-        // 3. Lógica para evaluar si el jugador acertó
+        // Lógica para evaluar si el jugador acertó
        private void VerificarRespuesta(string opcionElegida)
 {
     DataRow fila = dtPreguntas.Rows[indiceActual];
@@ -117,7 +117,7 @@ namespace ProyectoEducativo
     }
 }
 
-        // 4. Eventos de los botones (Recuerda hacerles doble clic en el diseñador para conectarlos)
+        // Eventos de los botones (Recuerda hacerles doble clic en el diseñador para conectarlos)
         void BtnAClick(object sender, EventArgs e)
         {
             VerificarRespuesta("A");
@@ -156,10 +156,10 @@ namespace ProyectoEducativo
 		
 		void AplicarIdioma()
 {
-    // 1. Traducir el título de la ventana
+    // Traducir el título de la ventana
     this.Text = Configuracion.EsIngles ? "Calculus Quiz" : "Cuestionario de Calculo";
     
-    // 2. Refrescar la pregunta actual con las nuevas columnas
+    // Refrescar la pregunta actual con las nuevas columnas
     if (dtPreguntas != null && dtPreguntas.Rows.Count > 0)
     {
         MostrarPregunta();
